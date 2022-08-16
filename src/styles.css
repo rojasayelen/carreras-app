@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Quantico', sans-serif;;
+}
+
+.contenedor1{
+    display: flex;
+    border: 3px solid #e87867;
+    border-radius: 10px ;
+}
+
