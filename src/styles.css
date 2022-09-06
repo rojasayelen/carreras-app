@@ -1,9 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
+
+*{
     background-color: black;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 100%;
+    background-color: black;
+    padding: 1em;
     color: white;
-    font-family: 'Quantico', sans-serif;;
+    font-family: 'Quantico', sans-serif;
+}
+
+
+body { 
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Quantico', sans-serif;
 }
 
 .contenedor1{
@@ -11,4 +27,7 @@ body {
     border: 3px solid #e87867;
     border-radius: 10px ;
 }
+
+
+
 
