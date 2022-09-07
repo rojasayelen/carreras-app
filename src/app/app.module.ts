@@ -9,25 +9,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { HomeComponent } from './home/home.component';
-import { PilotosComponent } from './pilotos/pilotos.component';
 
 import { MenuComponent } from './menu/menu.component';
 import { CarrerasComponent } from './carreras/carreras.component';
-import { AutodromosComponent } from './autodromos/autodromos.component';
+
 
 
 const router: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },
-  {
-    path: 'pilotos',
-    component: PilotosComponent
-  },
-  {
-    path: 'autodromos',
-    component: AutodromosComponent
   },
   {
     path: 'carreras',
