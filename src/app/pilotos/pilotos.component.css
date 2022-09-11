@@ -1,10 +1,36 @@
 .container{
   margin: 10px 10px 10px 10px;
-
   border-style: solid;
   border-width: 3px;
   border-color:  #E87867;
   border-radius: 10px;
   height: 95vh;
+}
+
+.image1{
+  margin: 18px;
+  height: 90vh;
+  background-image: url(../../assets/Pilotos_Carreras.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2px 2px 2px 2px;
+}
+
+.nombrePiloto{
+  margin: 5.5em 0 20em 20em;
+}
+
+.nombre{
+  /* margin: 0.9em 0 0 0; */
+  font-size: 55px;
+  line-height: 68px;
+  font-weight: lighter;
+}
+
+.apellido{
+  font-size: 85px;
+  font-style: italic;
+  font-weight: bold;
 }
 
