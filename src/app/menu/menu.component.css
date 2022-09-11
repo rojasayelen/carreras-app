@@ -1,5 +1,6 @@
-body{
-    background-color: black;
+nav{
+  margin: 0;
+  padding: 0;
 }
 #menuToggle{
     display:block ;
@@ -90,14 +91,12 @@ body{
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
-{
+#menu li{
   padding: 10px 0;
   font-size: 22px;
 }
 
 /*And let's slide it in from the left*/
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul{
   transform: none;
 }

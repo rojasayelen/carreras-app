@@ -1,0 +1,10 @@
+.container{
+  margin: 10px 10px 10px 10px;
+
+  border-style: solid;
+  border-width: 3px;
+  border-color:  #E87867;
+  border-radius: 10px;
+  height: 95vh;
+}
+

@@ -11,7 +11,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { MenuComponent } from './menu/menu.component';
-import { CarrerasComponent } from './carreras/carreras.component';
+
+import { PilotosComponent } from './pilotos/pilotos.component';
 
 
 
@@ -21,8 +22,8 @@ const router: Routes = [
     component: HomeComponent
   },
   {
-    path: 'carreras',
-    component: CarrerasComponent
+    path: 'pilotos',
+    component: PilotosComponent
   }
 ]
 
@@ -30,7 +31,8 @@ const router: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    PilotosComponent
     ],
   imports: [
     BrowserModule,
