@@ -1,25 +1,10 @@
 
-.header{
-    width: 100%;
-    background-color: black;
-    padding: 0;
-    color: white;
-    font-family: 'Quantico';
-}
-
-
 body{
     margin: 0;
     padding: 0;
     color: white;
     font-family: 'Quantico';
     background-color: black;
-}
-
-.contenedor1{
-    display: flex;
-    border: 3px solid #e87867;
-    border-radius: 10px ;
 }
 
 

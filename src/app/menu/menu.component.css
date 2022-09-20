@@ -2,6 +2,7 @@ nav{
   margin: 0;
   padding: 0;
 }
+
 #menuToggle{
     display:block ;
     position: relative;
@@ -39,7 +40,7 @@ nav{
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background-color:#3E3D3D;
+    background-color:#7a7979;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -59,7 +60,7 @@ nav{
  #menuToggle input:checked ~ span{
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #3E3D3D;
+  background: #7a7979;
 }
 
 /*para esconder la linea del medio*/
@@ -76,8 +77,8 @@ nav{
 /*para posicionarlo en el medio*/
 #menu{
   position: absolute;
-  width: 100px;
-  margin: -100px 0 0 -50px;
+  width: 110px;
+  margin: -100px 0 0 -80px;
   padding: 50px;
   padding-top: 125px;
   background: black;
@@ -94,6 +95,7 @@ nav{
 #menu li{
   padding: 10px 0;
   font-size: 22px;
+  font-weight: bold;
 }
 
 /*And let's slide it in from the left*/
