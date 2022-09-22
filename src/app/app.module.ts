@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 
 import { PilotosComponent } from './pilotos/pilotos.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 
 
@@ -32,7 +33,8 @@ const router: Routes = [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    PilotosComponent
+    PilotosComponent,
+    CategoriasComponent
     ],
   imports: [
     BrowserModule,

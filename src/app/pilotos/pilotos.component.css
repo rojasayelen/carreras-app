@@ -1,27 +1,42 @@
 .div1{
-  overflow: hidden;
-  height: 98vh;
-  width: 95vw;
-  margin: 1vh 2.5vw;
   border: 2px solid #e87867;
+  border-radius: 10px;overflow: hidden;
+  height: 96vh;
+  width: 98vw;
+  display: flex;
+  justify-content: center;
+  margin: 1vh 1vw;
+  padding-top: 1.5vh;
+  position: relative;
+}
+
+.div2{
+  height: 94vh;
+  width: 96vw;
+  display: flex;
+  vertical-align: middle;
+
   border-radius: 10px;
-  background-repeat: no-repeat;
-  background-attachment:inherit;
   position: relative;
   background-image: url(../../assets/Pilotos_Carreras.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   z-index: 0;
 }
 
-h1, h4{
+  .div3 h1{
+  margin-left: 500px;
   font-size: 16px;
   font-weight: 400;
   text-align: center;
+  position: absolute;
 }
 
 .nombrePiloto{
-  margin-top: 50px;
-  margin-left: 300px;
+  margin-top: 18vh;
+  margin-left: 20vw;
+  z-index: 3;
+
 }
 
 .nombre{
@@ -38,22 +53,61 @@ h1, h4{
 }
 
 .categoriasPiloto{
-  margin-top: 10px;
-  margin-left: 310px;
-  margin-right: 550px;
+  width: 45%;
+  font-size: 19px;
+  margin-top: 5vh;
+  margin-left: 20vw;
+  margin-right: 20vw  ;
   margin-bottom: 1px;
+  padding-bottom: 10px;
   height: 250px;
-  border: solid 2px red;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  min-width: 400px;
+  z-index: 1;
 }
 
 .categ{
-  width: 35px;
-  height: 35px;
-  font-size: 75%;
+  height: 95px;
+  font-size: 65%;
   text-align: center;
-  display: flex;
-  justify-content: center;
+  grid-gap: 1rem;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 150px 150px;
+
 }
 
+.puntos{
+  color: #e87867;
+  font-weight: bold;
+}
+/*
+.posicionPiloto{
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  grid-gap: 1rem;
+  z-index: 2;
+}
+
+.div4{
+  font-size: 16px;
+  float: left;
+}
+
+.div4 .pto{
+  position: absolute;
+  font-size: 80px;
+}
+
+.container{
+  position: absolute;
+  align-items: flex-end;
+}
+
+.flecha2_2{
+  float: left;
+} */
