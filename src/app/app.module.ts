@@ -7,26 +7,21 @@ import { MatSliderModule } from '@angular/material/slider';
 
 import { RouterModule, Routes } from '@angular/router';
 
-
 import { HomeComponent } from './home/home.component';
-
 import { MenuComponent } from './menu/menu.component';
-
 import { PilotosComponent } from './pilotos/pilotos.component';
-import { CategoriasComponent } from './categorias/categorias.component';
+import { NoticiasComponent } from './noticias/noticias.component';
 
 
 
 const router: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'pilotos',
-    component: PilotosComponent
-  }
-]
+  {path:'menu', component:MenuComponent},
+  {path:'noticias', component:NoticiasComponent},
+  {path:'pilotos', component:PilotosComponent},
+  {path:'home', component:HomeComponent},
+  {path:'', redirectTo:'home', pathMatch:'full'}
+];
+
 
 @NgModule({
   declarations: [
@@ -34,7 +29,7 @@ const router: Routes = [
     HomeComponent,
     MenuComponent,
     PilotosComponent,
-    CategoriasComponent
+    NoticiasComponent,
     ],
   imports: [
     BrowserModule,

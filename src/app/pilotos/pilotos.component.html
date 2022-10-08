@@ -1,12 +1,12 @@
 <div class="div1">
   <div class="div2">
     <app-menu></app-menu>
+
     <div class="div3">
       <h1 class="vista">PILOTOS</h1>
     </div>
 
     <div class="main">
-
       <div class="div4">
         <label>
           SIGUIENTE PILOTO
@@ -15,10 +15,16 @@
 
       <div class="navegadorPilotos">
         <a>
-          <img class="atras" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png">
+          <img class="pilotoAnterior" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png">
         </a>
         <a>
-          <img class="adelante" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png">
+          <img class="pilotoSiguiente" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png">
+        </a>
+        <a>
+          <img class="atras" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
+        </a>
+        <a>
+          <img class="adelante" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
         </a>
 
 
@@ -29,103 +35,75 @@
       </div>
 
       <div class="categoriasPiloto">
-
-
-        <div class="categ">
-          <h3>PC A</h3>
-          <h3 class="puntos">5.127</h3>
-        </div>
-
-        <div class="categ">
-          <h3>PC B</h3>
-          <h3 class="puntos">0</h3>
-        </div>
-
-        <div class="categ">
-          <h3>T 2000</h3>
-          <h3 class="puntos">0</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TC</h3>
-          <h3 class="puntos">2.957</h3>
-        </div>
-
-        <div class="categ">
-          <h3>2000 S</h3>
-          <h3 class="puntos">1.254</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TCM</h3>
-          <h3 class="puntos">286</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TCP</h3>
-          <h3 class="puntos">0</h3>
-        </div>
-        <div class="categ">
-          <h3>TCPK </h3>
-          <h3 class="puntos">0</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TN C2</h3>
-          <h3 class="puntos">0</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TN C3</h3>
-          <h3 class="puntos">286</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TP C1</h3>
-          <h3 class="puntos">816</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TP C2</h3>
-          <h3 class="puntos">2.154</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TP C3</h3>
-          <h3 class="puntos">0</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TRS</h3>
-          <h3 class="puntos">0</h3>
-        </div>
-
-        <div class="categ">
-          <h3>TR V6</h3>
-          <h3 class="puntos">286</h3>
-        </div>
-
-
-
-      <!-- </div>
-      <div class="posicionPiloto">
-        <div class="div4">
-          <h4>POS</h4>
-          <h4 class="pto">08</h4>
-        </div>
-        <div class="div5">
-          <h4>POS ANT</h4>
-          <h4 class="pto">08</h4>
-        </div>
-        <div class="div6">
-          <h4>PTS</h4>
-          <h4 class="pto">8.971,50</h4>
-        </div>
-        <div class="div7">
-          <h4>PTS ANT:</h4>
-          <h4 class="pto">8.928</h4>
-        </div>
-      </div> -->
+        <table>
+          <tr class="categ">
+            <td>PC A</td>
+            <td>PC B</td>
+            <td>T 2000</td>
+            <td>TC</td>
+            <td>2000 S</td>
+            <td>TCM</td>
+          </tr>
+          <tr class="puntos">
+            <td>5.127</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2.957</td>
+            <td>1.254</td>
+            <td>286</td>
+          </tr>
+          <tr class="categ">
+            <td>TCP</td>
+            <td>TCPK</td>
+            <td>TN C2</td>
+            <td>TN C3</td>
+            <td>TP C1</td>
+            <td>TP C2</td>
+          </tr>
+          <tr class="puntos">
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>286</td>
+            <td>816</td>
+            <td>2.154</td>
+          </tr>
+          <tr class="categ">
+            <td>TP C3</td>
+            <td>TRS</td>
+            <td>TR V6</td>
+          </tr>
+          <tr class="puntos">
+            <td>0</td>
+            <td>0</td>
+            <td>286</td>
+          </tr>
+        </table>
+      </div>
     </div>
+
+      <div class="puntos_seccion">
+        <div class="contenedor_info_posicion">
+          <div class="div_posicion">
+            <h3>POS</h3>
+            <p class="posicion">08</p>
+          </div>
+          <div class="div_posicion_ant">
+            <h3>POS ANT</h3>
+            <p class="posicion-ant">09</p>
+          </div>
+       </div>
+       <div class="contenedor_info_puntos">
+          <div class="div_puntos">
+            <h3>PTS</h3>
+            <p class="puntos">8971,50</p>
+          </div>
+          <div class="div_puntos_ant">
+            <h3>PUNTOS ANT</h3>
+            <p class="puntos_ant">8.928</p>
+          </div>
+       </div>
+      </div>
   </div>
 </div>
+
