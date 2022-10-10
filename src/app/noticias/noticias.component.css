@@ -23,22 +23,21 @@
 .semicircle {
   width: 50px;
   height: 100px;
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
   -moz-border-radius: 100px 0 0 100px ;
   -webkit-border-radius: 100px 0 0 100px;
   border-radius: 100px 0 0 100px;
   border-right: none;
   position: absolute;
-  top: 280px;
+  top: 40vh;
   right: 15px;
   background: transparent;
   z-index: 30;
 }
 
 #icono{
-  width: 3%;
-  margin-top: 41vh;
-  margin-left: 92.5vw;
+  height: 50px;
+  padding-left: 10px;
   z-index: 40;
 }
 
@@ -125,7 +124,7 @@
   left: 0px;
   font-size: 20px;
   top: 0px;
-  background-color: transparent;
+  background-color: #0b0a0a;
   color: #e87867;
   text-transform: uppercase;
   margin-left: 5px;
@@ -154,7 +153,7 @@
   left: 0px;
   font-size: 20px;
   top: 0px;
-  background-color: transparent;
+  background-color: #0b0a0a;
   color: #ffffff;
   text-transform: uppercase;
   margin-left: 5px;
@@ -183,7 +182,7 @@
   left: 0px;
   font-size: 20px;
   top: 0px;
-  background-color: transparent;
+  background-color: #0b0a0a;
   color: #e87867;
   text-transform: uppercase;
   margin-left: 5px;
