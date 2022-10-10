@@ -11,12 +11,14 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { PilotosComponent } from './pilotos/pilotos.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 
 
 const router: Routes = [
   {path:'menu', component:MenuComponent},
   {path:'noticias', component:NoticiasComponent},
+  {path:'categorias', component:CategoriasComponent},
   {path:'pilotos', component:PilotosComponent},
   {path:'home', component:HomeComponent},
   {path:'', redirectTo:'home', pathMatch:'full'}
@@ -30,6 +32,7 @@ const router: Routes = [
     MenuComponent,
     PilotosComponent,
     NoticiasComponent,
+    CategoriasComponent
     ],
   imports: [
     BrowserModule,
