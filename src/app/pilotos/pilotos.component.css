@@ -1,12 +1,12 @@
 .div1{
   border: 2px solid #e87867;
   border-radius: 10px;overflow: hidden;
-  height: 96vh;
+  min-height: 94vh;
   width: 96vw;
+  margin: 1vh 1vw;
   display: flex;
   justify-content: center;
-  margin: 1vh 1vw;
-  padding-top: 1.5vh;
+  padding: 1.5vh 1vw;
   position: relative;
 }
 
@@ -15,7 +15,6 @@
   width: 96vw;
   display: flex;
   vertical-align: middle;
-
   border-radius: 10px;
   position: relative;
   background-image: url(../../assets/Pilotos_Carreras.jpg);
