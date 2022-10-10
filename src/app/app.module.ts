@@ -16,11 +16,13 @@ import { CategoriasComponent } from './categorias/categorias.component';
 
 
 const router: Routes = [
-  {path:'menu', component:MenuComponent},
-  {path:'noticias', component:NoticiasComponent},
-  {path:'categorias', component:CategoriasComponent},
-  {path:'pilotos', component:PilotosComponent},
   {path:'home', component:HomeComponent},
+
+  {path:'pilotos', component:PilotosComponent},
+  {path:'categorias', component:CategoriasComponent},
+  {path:'noticias', component:NoticiasComponent},
+  {path:'menu', component:MenuComponent},
+
   {path:'', redirectTo:'home', pathMatch:'full'}
 ];
 
@@ -32,7 +34,9 @@ const router: Routes = [
     MenuComponent,
     PilotosComponent,
     NoticiasComponent,
-    CategoriasComponent
+    CategoriasComponent,
+
+
     ],
   imports: [
     BrowserModule,
