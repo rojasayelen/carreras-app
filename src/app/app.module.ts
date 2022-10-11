@@ -12,7 +12,8 @@ import { MenuComponent } from './menu/menu.component';
 import { PilotosComponent } from './pilotos/pilotos.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { CategoriasComponent } from './categorias/categorias.component';
-import { RankingAComponent } from './rankings/ranking-a/ranking-a.component';
+import { RankingsModule } from './rankings/rankings.module';
+
 
 
 
@@ -36,14 +37,12 @@ const router: Routes = [
     PilotosComponent,
     NoticiasComponent,
     CategoriasComponent,
-    RankingAComponent,
-
-
     ],
   imports: [
     BrowserModule,
     MatSliderModule,
     BrowserAnimationsModule,
+    RankingsModule,
     RouterModule.forRoot(router)
   ],
   providers: [],

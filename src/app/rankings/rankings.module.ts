@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RankingBComponent } from './ranking-b/ranking-b.component';
 import { RankingAComponent } from './ranking-a/ranking-a.component';
+import { RankingBComponent } from './ranking-b/ranking-b.component';
+
 
 
 
