@@ -4,18 +4,19 @@ import { PilotosComponent } from './pilotos/pilotos.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NoticiasComponent } from './noticias/noticias.component';
-import { RankingAComponent } from './rankings/ranking-a/ranking-a.component';
-import { RankingBComponent } from './rankings/ranking-b/ranking-b.component';
-import { RankingsModule } from './rankings/rankings.module';
+import { RankingSponsorsComponent } from './ranking.sponsors/ranking.sponsors.component';
+import { RankingTablaComponent } from './ranking.tabla/ranking.tabla.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
-  {path:'ranking', loadChildren: () => import('./rankings/rankings.module').then(m => m.RankingsModule)},
+  {path:'ranking', component:RankingSponsorsComponent},
+  {path:'ranking-tabla', component:RankingTablaComponent},
   {path:'pilotos', component:PilotosComponent},
   {path:'menu', component:MenuComponent},
   //TODO: Categorias
   {path:'noticias', component:NoticiasComponent},
-  {path:'', redirectTo:'home', pathMatch:'full'}
+  {path:'', redirectTo:'home', pathMatch:'full'},
+
 ];
 
 @NgModule({

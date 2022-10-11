@@ -17,36 +17,19 @@
   vertical-align: middle;
   border-radius: 10px;
   position: relative;
-  background-image: url(../../assets/Categorías_Carreras.jpg);
+  background-image: url(../../assets/Autos_Carrera.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
   z-index: 0;
 }
 
 .div3 h1{
-  margin-left: 600px;
+  margin-left: 40vw;
   margin-top: 35px;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
   position: absolute;
-  z-index: 10;
-}
-
-#menuToggle span{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background-color:#7a7979;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-            opacity 0.55s ease;
 }
 
 .navegador img {
@@ -62,18 +45,11 @@
 
 .atras {
   transform: rotate(180deg);
-  margin-left: 650px;
+  margin-left: 65vw;
 }
 
 .adelante {
   margin-left: 20px;
 }
 
-.texto {
-  margin-top: 10vh;
-  margin-left: 20vw;
-  font-size: 80px;
-  z-index: 10;
-  color: white;
 
-}

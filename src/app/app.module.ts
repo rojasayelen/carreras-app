@@ -12,19 +12,17 @@ import { MenuComponent } from './menu/menu.component';
 import { PilotosComponent } from './pilotos/pilotos.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { CategoriasComponent } from './categorias/categorias.component';
-import { RankingsModule } from './rankings/rankings.module';
-
-
-
+import { RankingSponsorsComponent } from './ranking.sponsors/ranking.sponsors.component';
+import { RankingTablaComponent } from './ranking.tabla/ranking.tabla.component';
 
 const router: Routes = [
   {path:'home', component:HomeComponent},
-
+  {path:'ranking', component:RankingSponsorsComponent},
+  {path:'ranking-tabla', component:RankingTablaComponent},
   {path:'pilotos', component:PilotosComponent},
   {path:'categorias', component:CategoriasComponent},
   {path:'noticias', component:NoticiasComponent},
   {path:'menu', component:MenuComponent},
-
   {path:'', redirectTo:'home', pathMatch:'full'}
 ];
 
@@ -37,12 +35,13 @@ const router: Routes = [
     PilotosComponent,
     NoticiasComponent,
     CategoriasComponent,
+    RankingSponsorsComponent,
+    RankingTablaComponent,
     ],
   imports: [
     BrowserModule,
     MatSliderModule,
     BrowserAnimationsModule,
-    RankingsModule,
     RouterModule.forRoot(router)
   ],
   providers: [],
