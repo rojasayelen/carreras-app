@@ -100,8 +100,29 @@ td {
 .navegadorRanking {
   font-size: 20px;
   margin-left: 80vh;
+  margin-top: 1em;
+
+}
+
+.etiqueta-anterior {
+  float:left;
 }
 
 .anteriores {
   transform: rotate(180deg);
+  float:left;
+  margin-top: 1em;
 }
+
+.etiqueta-proximo{
+  float: left;
+}
+
+.proximos{
+  float:left;
+  margin-top: 1em;
+}
+
+
+
+
