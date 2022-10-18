@@ -9,9 +9,9 @@ import { Pilotos } from './pilotos';
 
 export class PilotosService {
 
-  // private baseURL="https://back-ranking.herokuapp.com/ver/pilotos";
+  private baseURL="https://back-ranking.herokuapp.com/ver/pilotos";
 
-  private baseURL="http://localhost:4200/ver/pilotos";
+  // private baseURL="http://localhost:4200/ver/pilotos";
 
 
   pilot = {
