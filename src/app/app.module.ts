@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +16,9 @@ import { CategoriasSponsorsComponent } from './categorias.sponsors/categorias.sp
 import { RankingSponsorsComponent } from './ranking.sponsors/ranking.sponsors.component';
 import { RankingTablaComponent } from './ranking.tabla/ranking.tabla.component';
 import { CategoriasTablasComponent } from './categorias-tablas/categorias-tablas.component';
+import { CategoriasComponent } from './helpers/categorias/categorias.component';
+import { PilCatPuntComponent } from './pilotos/pil-cat-punt/pil-cat-punt.component';
+import { FormsModule } from '@angular/forms';
 
 const router: Routes = [
   {path:'home', component:HomeComponent},
@@ -39,13 +43,17 @@ const router: Routes = [
     RankingSponsorsComponent,
     RankingTablaComponent,
     CategoriasTablasComponent,
-    CategoriasSponsorsComponent
+    CategoriasSponsorsComponent,
+    CategoriasComponent,
+    PilCatPuntComponent
     ],
   imports: [
     BrowserModule,
     MatSliderModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(router)
+    RouterModule.forRoot(router),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

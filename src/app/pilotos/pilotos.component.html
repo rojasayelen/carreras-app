@@ -1,3 +1,4 @@
+
 <div class="div1">
   <div class="div2">
     <app-menu></app-menu>
@@ -10,6 +11,7 @@
       <div class="div4">
         <label>
           SIGUIENTE PILOTO
+          {{traerPilotos | json}}
         </label>
       </div>
 
@@ -26,61 +28,68 @@
         <a>
           <img class="adelante" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
         </a>
-
-
       </div>
 
+      <form>
       <div class="nombrePiloto">
-        <h3 class="nombre">FACUNDO<br><span class="apellido">CHAPUR</span></h3>
+        <h3 class="nombre"><br><span class="apellido"> </span></h3>
       </div>
 
       <div class="categoriasPiloto">
         <table>
-          <tr class="categ">
-            <td>PC A</td>
-            <td>PC B</td>
+          <td>
+            <select [(ngModel)]="selectedPiloto" *ngFor="let pilo of pilot">
+              <option>
+                {{pilo.nombrePiloto}}
+              </option>
+            </select>
+          </td>
+          <tr class="categ" *ngFor="let cates of cate">
+            <th>{{cates.idCategoria}}</th>
+            <!-- <td>PC B</td>
             <td>T 2000</td>
             <td>TC</td>
             <td>2000 S</td>
-            <td>TCM</td>
+            <td>TCM</td> -->
           </tr>
-          <tr class="puntos">
-            <td>5.127</td>
-            <td>0</td>
+          <!-- <tr class="puntos" *ngFor="let puntos of punto ">
+            <td>{{puntos.puntosActuales}}</td> -->
+            <!-- <td>0</td>
             <td>0</td>
             <td>2.957</td>
             <td>1.254</td>
-            <td>286</td>
-          </tr>
-          <tr class="categ">
+            <td>286</td> -->
+          <!-- </tr> -->
+          <!-- <tr class="categ">
             <td>TCP</td>
             <td>TCPK</td>
             <td>TN C2</td>
             <td>TN C3</td>
             <td>TP C1</td>
             <td>TP C2</td>
-          </tr>
-          <tr class="puntos">
-            <td>0</td>
+          </tr> -->
+          <!-- <tr class="puntos"> -->
+            <!-- <td>0</td>
             <td>0</td>
             <td>0</td>
             <td>286</td>
             <td>816</td>
-            <td>2.154</td>
-          </tr>
-          <tr class="categ">
+            <td>2.154</td> -->
+          <!-- </tr> -->
+          <!-- <tr class="categ">
             <td>TP C3</td>
             <td>TRS</td>
             <td>TR V6</td>
-          </tr>
-          <tr class="puntos">
+          </tr> -->
+          <!-- <tr class="puntos"> -->
+            <!-- <td>0</td>
             <td>0</td>
-            <td>0</td>
-            <td>286</td>
-          </tr>
+            <td>286</td> -->
+          <!-- </tr> -->
         </table>
       </div>
-    </div>
+
+  </form>
 
       <div class="puntos_seccion">
         <div class="contenedor_info_posicion">
