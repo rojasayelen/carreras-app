@@ -17,11 +17,31 @@ import { PilCatPuntService } from './pilCatPunt/pilCatPunt.service';
 })
 export class PilotosComponent implements OnInit {
 
-  cargar:boolean=true;
-  selectedPiloto: Pilotos = new Pilotos();
-  piloto: Pilotos[] = [];
-  selectedPuntos: PilCatPunt = new PilCatPunt();
-  puntos: PilCatPunt[] = [];
+
+  ver:boolean=false;
+  // piluh:PilCatPuntComponent[] = [];
+
+  pilu: Pilotos = {
+    idPiloto:0,
+    nombrePiloto:'',
+    apellidoPiloto:'',
+    urlImgPiloto:'',
+    puntajeAntPiloto:0,
+    puntajeActPiloto:0
+ }
+
+  // selectedPiloto: Pilotos = {
+  //    idPiloto:0,
+  //    nombrePiloto:'',
+  //    apellidoPiloto:'',
+  //    urlImgPiloto:'',
+  //    puntajeAntPiloto:0,
+  //    puntajeActPiloto:0
+  // }
+  piloto: Pilotos[] = []; //ok
+  selectedPuntos: PilCatPunt = new PilCatPunt;
+
+  // puntos: PilCatPunt[] = [];
 
   constructor(
     private pilotoService:PilotosService,
@@ -30,22 +50,19 @@ export class PilotosComponent implements OnInit {
 
   ngOnInit(): void {
     this.traerPilotos();
-
   }
 
-  public traerPilotos(){
+  public traerPilotos(){//ok
     this.pilotoService.obtenerPilotos().subscribe(dato =>{this.piloto = dato});
   }
 
-  public traerPilCatPuntxPil(nombrePiloto: string){
-    this.pilcatpuntService.getPilCatPuntxPil(nombrePiloto).subscribe(dato =>{this.puntos = dato});
+  elegir(pil: Pilotos){ //ok
+    const datoNombre = this.pilu;
+    console.log(datoNombre, 'datoNombre de Elegir');
+    this.ver = true;
+    console.log('entra en elegir', this.ver)
   }
 
-  public elegir(pil: Pilotos){
-    this.selectedPiloto.nombrePiloto = pil.nombrePiloto
-    const datoNombre = this.selectedPiloto;
-    this.cargar = true;
-  }
 
 
 

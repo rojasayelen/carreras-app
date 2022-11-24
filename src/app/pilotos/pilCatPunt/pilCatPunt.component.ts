@@ -3,7 +3,6 @@ import { PilCatPuntService } from './pilCatPunt.service';
 import { PilCatPunt } from './pilCatPunt';
 import { Router } from '@angular/router';
 import { Pilotos } from '../pilotos';
-import { PilotosComponent } from '../pilotos.component';
 import { PilotosService } from '../pilotos.service';
 
 @Component({
@@ -13,11 +12,16 @@ import { PilotosService } from '../pilotos.service';
 })
 export class PilCatPuntComponent implements OnInit {
 
-  @Input() datoNombre: any;
-  nombrePil: Pilotos[] = [];
+  @Input() datoNombre: any = {};
+  // pilu: Pilotos[] = [];
+
+  selectedPuntos: PilCatPunt = new PilCatPunt();
+
 
   ngOnInit(): void {
-    this.traerPilotos();
+    console.log('esto es dato nombre ngOnInit', this.datoNombre.nombrePilotoPilCatPunt);
+    this.traerPilCatPunt(this.datoNombre.nombrePilotoPilCatPunt);
+
  }
 
   constructor(
@@ -25,37 +29,40 @@ export class PilCatPuntComponent implements OnInit {
     private router:Router,
     private pilotoService: PilotosService) { }
 
-    cargar:boolean = true;
+    ver:boolean = true;
 
     piloto: Pilotos[] = [];
     pilo: Pilotos[] = [
       {
         idPiloto: 1,
         nombrePiloto: '',
+        apellidoPiloto:'',
         urlImgPiloto: '',
         puntajeAntPiloto: 0,
         puntajeActPiloto: 0,
       }
     ];
 
-    puntCat: PilCatPunt[] = [
-      {
-        idPilCatPunt:1,
-        nombrePilotoPilCatPunt:'',
-        idCategoriaPilCatPunt:'',
-        puntosAntPilCantPunt:0,
-        puntosActPilCantPunt:0
-      }
-    ];
+    punto: PilCatPunt[] = [];
+    pilCatPunt :PilCatPunt[]=[ {
+      idPilCatPunt:1,
+      nombrePilotoPilCatPunt:"",
+      idCategoriaPilCatPunt:"",
+      puntosAntPilCantPunt:1,
+      puntosActPilCantPunt:1,
+    }];
 
-    traerPilotos(){
-      this.pilotoService.obtenerPilotos().subscribe(dato =>{
-        this.piloto = dato});
-  }
+    // traerPilotos(){
+    //   this.pilotoService.obtenerPilotos().subscribe(dato =>{
+    //     this.piloto = dato});
+  // }
 
-    traerPilCatPunt(nombrePiloto: string){
-      this.pilCatPuntService.getPilCatPuntxPil(nombrePiloto).subscribe((
-        dato: PilCatPunt[]) => {this.datoNombre = dato}) //ver
+    traerPilCatPunt(nombrePiloto:string){
+      this.pilCatPuntService.obtenerPilCatPuntxPil(nombrePiloto).subscribe((
+        dato: PilCatPunt[]) => {this.pilCatPunt = dato;
+        console.log('este es el dato', this.pilCatPunt[1], nombrePiloto);
+
+        }) //ver
     }
 
  }

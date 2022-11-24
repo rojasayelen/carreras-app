@@ -10,13 +10,17 @@ import { PilCatPunt } from './pilCatPunt';
 
 export class PilCatPuntService{
 
-  private buscaPilURL="https://back-ranking.herokuapp.com/ver/pilCatPuntXPiloto/"
-  private nombrePiloto: PilCatPunt[] = [];
+  private buscaPilURL="https://back-ranking.herokuapp.com/ver/pilCatPuntXPiloto/";
+  private baseURL="https://back-ranking.herokuapp.com/ver/pilCatPunt";
+
+  // private nombrePiloto: PilCatPunt[] = [];
 
   constructor(private httpClient: HttpClient){}
 
-  getPilCatPuntxPil(nombrePiloto:string):Observable<PilCatPunt[]>{
+  obtenerPilCatPuntxPil(nombrePiloto:string):Observable<PilCatPunt[]>{
     return this.httpClient.get<PilCatPunt[]>(`${this.buscaPilURL}`+ nombrePiloto);
   }
-
+  obtenerPilCatPunt():Observable<PilCatPunt[]>{
+    return this.httpClient.get<PilCatPunt[]>(`${this.baseURL}`);
+  }
 }

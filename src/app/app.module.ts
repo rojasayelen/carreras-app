@@ -29,6 +29,7 @@ const router: Routes = [
   {path:'categorias-tabla', component:CategoriasTablasComponent},
   {path:'noticias', component:NoticiasComponent},
   {path:'menu', component:MenuComponent},
+  {path: 'pilCatPunt', component:PilCatPuntComponent},
   {path:'', redirectTo:'home', pathMatch:'full'}
 ];
 

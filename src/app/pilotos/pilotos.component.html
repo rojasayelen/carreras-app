@@ -36,25 +36,26 @@
       </div>
 
       <div class="categoriasPiloto">
+        <div>
 
-        <select [(ngModel)]="selectedPiloto.nombrePiloto">
-          <option value={{pilot.nombrePiloto}} *ngFor="let pilot of piloto">
-            {{pilot.nombrePiloto}}
-          </option>
-        </select>
+          <select name="miSelect" [(ngModel)]="pilu">
+
+            <option [ngValue]="pilot" *ngFor="let pilot of piloto">
+              {{pilot.nombrePiloto}}
+            </option>
+          </select>
         </div>
 
-        <div *ngIf="cargar">
-          <app-pilCatPunt></app-pilCatPunt>
-        </div>
+        <button (click)="elegir(pilu)" class="ssss">Traer Info del Piloto</button>
+
+      </div>
+
    </form>
 
-   <table>
-
-   </table>
 
 
-      <div class="puntos_seccion">
+
+      <!-- <div class="puntos_seccion">
         <div class="contenedor_info_posicion">
           <div class="div_posicion">
             <h3>POS</h3>
@@ -73,9 +74,13 @@
           <div class="div_puntos_ant">
             <h3>PUNTOS ANT</h3>
             <p class="puntos_ant">8.928</p>
-          </div> -->
+          </div>
         </div>
-      </div>
+      </div> -->
   </div>
+</div>
+
+<div *ngIf="ver">
+  <app-pilCatPunt [datoNombre]="pilu"></app-pilCatPunt>
 </div>
 
