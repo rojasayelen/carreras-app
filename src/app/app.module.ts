@@ -17,7 +17,7 @@ import { RankingSponsorsComponent } from './ranking.sponsors/ranking.sponsors.co
 import { RankingTablaComponent } from './ranking.tabla/ranking.tabla.component';
 import { CategoriasTablasComponent } from './categorias-tablas/categorias-tablas.component';
 import { CategoriasComponent } from './helpers/categorias/categorias.component';
-import { PilCatPuntComponent } from './pilotos/pil-cat-punt/pil-cat-punt.component';
+import { PilCatPuntComponent } from './pilotos/pilCatPunt/pilCatPunt.component';
 import { FormsModule } from '@angular/forms';
 
 const router: Routes = [

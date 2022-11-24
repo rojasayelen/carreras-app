@@ -11,7 +11,7 @@
       <div class="div4">
         <label>
           SIGUIENTE PILOTO
-          {{traerPilotos | json}}
+
         </label>
       </div>
 
@@ -36,60 +36,23 @@
       </div>
 
       <div class="categoriasPiloto">
-        <table>
-          <td>
-            <select [(ngModel)]="selectedPiloto" *ngFor="let pilo of pilot">
-              <option>
-                {{pilo.nombrePiloto}}
-              </option>
-            </select>
-          </td>
-          <tr class="categ" *ngFor="let cates of cate">
-            <th>{{cates.idCategoria}}</th>
-            <!-- <td>PC B</td>
-            <td>T 2000</td>
-            <td>TC</td>
-            <td>2000 S</td>
-            <td>TCM</td> -->
-          </tr>
-          <!-- <tr class="puntos" *ngFor="let puntos of punto ">
-            <td>{{puntos.puntosActuales}}</td> -->
-            <!-- <td>0</td>
-            <td>0</td>
-            <td>2.957</td>
-            <td>1.254</td>
-            <td>286</td> -->
-          <!-- </tr> -->
-          <!-- <tr class="categ">
-            <td>TCP</td>
-            <td>TCPK</td>
-            <td>TN C2</td>
-            <td>TN C3</td>
-            <td>TP C1</td>
-            <td>TP C2</td>
-          </tr> -->
-          <!-- <tr class="puntos"> -->
-            <!-- <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>286</td>
-            <td>816</td>
-            <td>2.154</td> -->
-          <!-- </tr> -->
-          <!-- <tr class="categ">
-            <td>TP C3</td>
-            <td>TRS</td>
-            <td>TR V6</td>
-          </tr> -->
-          <!-- <tr class="puntos"> -->
-            <!-- <td>0</td>
-            <td>0</td>
-            <td>286</td> -->
-          <!-- </tr> -->
-        </table>
-      </div>
 
-  </form>
+        <select [(ngModel)]="selectedPiloto.nombrePiloto">
+          <option value={{pilot.nombrePiloto}} *ngFor="let pilot of piloto">
+            {{pilot.nombrePiloto}}
+          </option>
+        </select>
+        </div>
+
+        <div *ngIf="cargar">
+          <app-pilCatPunt></app-pilCatPunt>
+        </div>
+   </form>
+
+   <table>
+
+   </table>
+
 
       <div class="puntos_seccion">
         <div class="contenedor_info_posicion">
@@ -110,8 +73,8 @@
           <div class="div_puntos_ant">
             <h3>PUNTOS ANT</h3>
             <p class="puntos_ant">8.928</p>
-          </div>
-       </div>
+          </div> -->
+        </div>
       </div>
   </div>
 </div>

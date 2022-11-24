@@ -9,7 +9,7 @@ import { Categorias } from './categorias';
 })
 export class CategoriasService {
 
-  //private baseURL="https://back-ranking.herokuapp.com/ver/categorias";
+  private baseURL="https://back-ranking.herokuapp.com/ver/categorias";
 
 
   // cat = {
@@ -53,7 +53,7 @@ export class CategoriasService {
   constructor(private httpClient: HttpClient) { }
 
   obtenerCategorias():Observable<Categorias[]>{
-    return this.httpClient.get<Categorias[]>(`${this.}`);
+    return this.httpClient.get<Categorias[]>(`${this.baseURL}`);
   }
 
 }
