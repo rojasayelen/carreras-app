@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { Pilotos } from './pilotos';
@@ -19,7 +19,6 @@ export class PilotosComponent implements OnInit {
 
 
   ver:boolean=false;
-  // piluh:PilCatPuntComponent[] = [];
 
   pilu: Pilotos = {
     idPiloto:0,

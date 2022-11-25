@@ -38,21 +38,28 @@ export class PilCatPuntComponent implements OnInit {
     ];
 
     punto: PilCatPunt[] = [];
-    pilCatPunt :PilCatPunt[]=[ {
-      idPilCatPunt:1,
-      nombrePilotoPilCatPunt:"asdfasdfadgfadfas",
-      idCategoriaPilCatPunt:"",
-      puntosAntPilCantPunt:1,
-      puntosActPilCantPunt:1,
-    }];
+    pilCatPunt :PilCatPunt[]=[
+      {
+        idPilCatPunt:1,
+        nombrePilotoPilCatPunt:"",
+        idCategoriaPilCatPunt:"",
+        puntosAntPilCantPunt:1,
+        puntosActPilCantPunt:1,
+      }
+    ];
+
+    public traerPilotos(){//ok
+      this.pilotoService.obtenerPilotos().subscribe(dato =>{this.piloto = dato});
+    }
 
     traerPilCatPunt(nombrePiloto:string){
-      nombrePiloto = '';
+      nombrePiloto = 'pedro';
+
       this.pilCatPuntService.obtenerPilCatPuntxPil(nombrePiloto).subscribe((
         dato: PilCatPunt[]) => {this.pilCatPunt = dato;
         console.log('este es el dato', this.pilCatPunt[1], nombrePiloto);
 
-        }) //ver
+        })
     }
 
  }
