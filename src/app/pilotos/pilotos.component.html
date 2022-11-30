@@ -1,18 +1,51 @@
+<div class="div1">
 
-  <div>
-       <div>
-          <select name="miSelect" [(ngModel)]="pilu">
-            <option [ngValue]="pilot" *ngFor="let pilot of piloto">
-              {{pilot.nombrePiloto}}
-            </option>
-          </select>
-        </div>
+  <div class="div2">
+    <app-menu></app-menu>
 
-        <button (click)="elegir(pilu)" class="ssss">Traer Info del Piloto</button>
+    <div class="div3">
+      <h1 class="vista">PILOTOS</h1>
+    </div>
 
+    <div class="main">
+      <div class="div4">
+        <label>
+          SIGUIENTE PILOTO
+
+        </label>
       </div>
 
-<div *ngIf="ver">
-  <app-pilCatPunt [datoNombre]="pilu"></app-pilCatPunt>
+      <div class="navegadorPilotos">
+        <a>
+          <img class="pilotoAnterior" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png">
+        </a>
+        <a>
+          <img class="pilotoSiguiente" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png">
+        </a>
+        <a>
+          <img class="atras" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
+        </a>
+        <a>
+          <img class="adelante" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
+        </a>
+      </div>
+
+
+    <div class="tabla" *ngIf="verSelect">
+        <div>
+            <select name="miSelect" [(ngModel)]="pilu">
+              <option [ngValue]="pilot" *ngFor="let pilot of piloto">
+                {{pilot.nombrePiloto}}
+              </option>
+            </select>
+          </div>
+            <button (click)="elegir(pilu)" class="ssss">Traer Info del Piloto</button>
+        </div>
+
+    <div class="puntosPiloto" *ngIf="ver" class=>
+      <app-pilCatPunt [datoNombre]="pilu"></app-pilCatPunt>
+    </div>
+
+  </div>
 </div>
 

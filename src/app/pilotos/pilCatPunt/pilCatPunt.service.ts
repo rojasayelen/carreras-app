@@ -20,6 +20,7 @@ export class PilCatPuntService{
   obtenerPilCatPuntxPil(nombrePiloto:string):Observable<PilCatPunt[]>{
     return this.httpClient.get<PilCatPunt[]>(`${this.buscaPilURL}`+ nombrePiloto);
   }
+
   obtenerPilCatPunt():Observable<PilCatPunt[]>{
     return this.httpClient.get<PilCatPunt[]>(`${this.baseURL}`);
   }

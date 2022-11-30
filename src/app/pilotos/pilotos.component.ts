@@ -7,6 +7,7 @@ import { PilotosService } from './pilotos.service';
 import { PilCatPunt } from './pilCatPunt/pilCatPunt';
 import { PilCatPuntComponent } from './pilCatPunt/pilCatPunt.component';
 import { PilCatPuntService } from './pilCatPunt/pilCatPunt.service';
+import { FormRecord } from '@angular/forms';
 
 
 @Component({
@@ -17,10 +18,10 @@ import { PilCatPuntService } from './pilCatPunt/pilCatPunt.service';
 })
 export class PilotosComponent implements OnInit {
 
-
+  verSelect:boolean=true;
   ver:boolean=false;
 
-  pilu: Pilotos = {
+  pilu = {
     idPiloto:0,
     nombrePiloto:'',
     apellidoPiloto:'',
@@ -29,18 +30,7 @@ export class PilotosComponent implements OnInit {
     puntajeActPiloto:0
  }
 
-  // selectedPiloto: Pilotos = {
-  //    idPiloto:0,
-  //    nombrePiloto:'',
-  //    apellidoPiloto:'',
-  //    urlImgPiloto:'',
-  //    puntajeAntPiloto:0,
-  //    puntajeActPiloto:0
-  // }
   piloto: Pilotos[] = []; //ok
-  selectedPuntos: PilCatPunt = new PilCatPunt;
-
-  // puntos: PilCatPunt[] = [];
 
   constructor(
     private pilotoService:PilotosService,
@@ -57,12 +47,8 @@ export class PilotosComponent implements OnInit {
 
   elegir(pil: Pilotos){ //ok
     const datoNombre = this.pilu;
-    console.log(datoNombre, 'datoNombre de Elegir');
     this.ver = true;
-    console.log('entra en elegir', this.ver)
+    this.verSelect = false;
   }
-
-
-
 
 }

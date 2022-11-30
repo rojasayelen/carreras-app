@@ -1,0 +1,18 @@
+.nombre{
+  margin-bottom: 0;
+  font-size: 55pt;
+  line-height: 1.15em;
+  font-weight: lighter;
+}
+.span{
+display: flex;
+}
+
+.categorias{
+  margin: 20em;
+  margin-top: 15em;
+}
+
+p{
+  line-height: 2px;
+}
