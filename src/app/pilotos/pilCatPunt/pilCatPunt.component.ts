@@ -1,4 +1,4 @@
-import { Component, Input, Output,OnInit, EventEmitter } from '@angular/core';
+import { Component, Input, Output,OnInit } from '@angular/core';
 import { PilCatPuntService } from './pilCatPunt.service';
 import { PilCatPunt } from './pilCatPunt';
 import { Router } from '@angular/router';
@@ -13,7 +13,7 @@ import { PilotosService } from '../pilotos.service';
 export class PilCatPuntComponent implements OnInit {
 
   @Input() datoNombre: any;
-  @Output() newDatoNombreEvent = new EventEmitter<PilCatPunt[]>();
+  @Output() newDatoNombre: any;
 
 
   ngOnInit(): void {
@@ -29,10 +29,6 @@ export class PilCatPuntComponent implements OnInit {
     private router:Router,
     private pilotoService: PilotosService) { }
 
-    consultaDatoNombre(categ: string, puntos: number){
-      this.newDatoNombreEvent.emit();
-    }
-
     piloto: Pilotos[] = [];
     pilo: Pilotos[] = [
       {
@@ -45,7 +41,7 @@ export class PilCatPuntComponent implements OnInit {
       }
     ];
 
-    // punto: PilCatPunt[] = [];
+    puntos: PilCatPunt[] = [];
     pilCatPunt: PilCatPunt[]=[
       {
         idPilCatPunt:0,
@@ -61,18 +57,19 @@ export class PilCatPuntComponent implements OnInit {
     }
 
     traerPilCatPunt(nombrePiloto:string){
+
       this.pilCatPuntService.obtenerPilCatPuntxPil(nombrePiloto).subscribe((
         dato: PilCatPunt[]) => {this.pilCatPunt = dato;
+          console.log(this.pilCatPunt, 'esto es el dato')
+        // let categAr = [''];
+        // let puntosAr = [''];
 
-        let categAr = [''];
-        let puntosAr = [''];
-
-          for(let dato of this.pilCatPunt){
-            // console.log(dato, 'dato del for');
-            const categorias = categAr.push(this.datoNombre.idCategoriaPilCatPunt);
-            const puntos = puntosAr.push(this.datoNombre.puntajeActPiloto);
-            console.log(categorias, puntos,  'categorias y puntos despues del push')
-          }
+          // for(let dato of this.pilCatPunt){
+          //   // console.log(dato, 'dato del for');
+          //   const categorias = categAr.push(this.datoNombre.idCategoriaPilCatPunt);
+          //   const puntos = puntosAr.push(this.datoNombre.puntajeActPiloto);
+          //   console.log(categorias, puntos,  'categorias y puntos despues del push')
+          // }
           //console.log(categAr[0], puntosAr[0], 'arrays');
 
 

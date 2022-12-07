@@ -1,16 +1,25 @@
-
-<div class="categorias">
-
-<div class="nombrePiloto" *ngFor="let dat of pilCatPunt">
-  <table>
-    <tr ng-repeat="pilo in pilotos">
-    <th>{{dat.idCategoriaPilCatPunt}}<br></th>
-    </tr>
-    <tr>
-      <td>{{dat.puntosActPilCantPunt}}</td>
-    </tr>
-
+<div class="vista">
+  <table class="table">
+    <thead class="nombrePiloto">
+      <div>
+        <tr>
+        <th *ngFor="let dat of pilCatPunt">{{dat.idCategoriaPilCatPunt}} </th>
+        </tr>
+      </div>
+      <div>
+        <tr>
+        <th class="puntos" *ngFor="let dat of pilCatPunt">{{dat.puntosActPilCantPunt}}</th>
+        </tr>
+      </div>
+    </thead>
   </table>
 </div>
 
+<!-- <div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
+ -->

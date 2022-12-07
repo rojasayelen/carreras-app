@@ -1,18 +1,38 @@
-.nombre{
-  margin-bottom: 0;
-  font-size: 55pt;
-  line-height: 1.15em;
-  font-weight: lighter;
-}
-.span{
-display: flex;
-}
 
 .categorias{
   margin: 20em;
   margin-top: 15em;
+
 }
 
-p{
-  line-height: 2px;
+.puntos{
+  color: #e87867;
+
 }
+
+th:nth-of-type(n+6) {
+  display:none;
+
+}
+
+/* .table{
+  margin: auto;
+} */
+
+.nombrePiloto {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.vista{
+  border: solid 3px coral;
+  margin-top: 18em;
+  margin-left: 15em;
+  width: 50%;
+}
+
+/* .wrapper {
+  display: grid;
+  grid-template-columns: repeat(15, 50px);
+  grid-gap: 10px;
+} */
