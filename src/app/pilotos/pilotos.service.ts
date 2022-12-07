@@ -10,7 +10,7 @@ import { PilCatPunt } from './pilCatPunt/pilCatPunt';
 })
 
 export class PilotosService {
-  private baseURL="https://back-ranking.herokuapp.com/ver/pilotos";
+  private baseURL="https://complete-audry-privas06.koyeb.app/ver/pilotos";
 
 
   private pilotos: Pilotos[] = []

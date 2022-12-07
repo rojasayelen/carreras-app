@@ -12,12 +12,7 @@
 
 th:nth-of-type(n+6) {
   display:none;
-
 }
-
-/* .table{
-  margin: auto;
-} */
 
 .nombrePiloto {
   display: grid;

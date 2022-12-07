@@ -10,8 +10,8 @@ import { PilCatPunt } from './pilCatPunt';
 
 export class PilCatPuntService{
 
-  private buscaPilURL="https://back-ranking.herokuapp.com/ver/pilCatPuntXPiloto/";
-  private baseURL="https://back-ranking.herokuapp.com/ver/pilCatPunt";
+  private buscaPilURL="https://complete-audry-privas06.koyeb.app/ver/pilCatPuntXPiloto/";
+  private baseURL="https://complete-audry-privas06.koyeb.app/ver/pilCatPunt";
 
   // private nombrePiloto: PilCatPunt[] = [];
 
