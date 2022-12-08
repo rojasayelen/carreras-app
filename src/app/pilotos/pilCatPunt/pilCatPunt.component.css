@@ -2,7 +2,7 @@
   font-size: 60px;
   font-weight:200;
   text-transform: uppercase;
-  margin-left: 100px;
+  margin-left: 130px;
   line-height: normal;
 }
 
@@ -10,7 +10,7 @@
   font-size: 80px;
   font-weight:bold;
   text-transform: uppercase;
-  margin-left: 120px;
+  margin-left: 150px;
   line-height: 80px;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .card{
-  height: 50px;
+  height: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,12 +33,12 @@
   text-align: center;
   font-size: 18px;
   font-weight: 200;
-  line-height: 30px;
+
 }
 
 .categ{
   color: white;
-  line-height: 30px;
+  line-height: 40px;
 }
 
 .puntos{
@@ -46,7 +46,7 @@
 }
 
 .mostrarPiloto{
-  border: blue solid 3px;
+  /* border: blue solid 3px; */
   /* width: 600px; */
   margin-top: 5em;
   margin-left: 80px;
