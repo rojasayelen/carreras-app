@@ -24,6 +24,8 @@
 }
 
 .div3 h1{
+  background-color: blueviolet;
+  border: 3px solid green;
   margin-left: 600px;
   margin-top: 35px;
   font-size: 20px;
@@ -33,6 +35,8 @@
 }
 
 .div4{
+  background-color: aquamarine;
+  border: 3px solid red;
   position: absolute;
   height: fit-content;
   color: #e87867;
@@ -40,7 +44,7 @@
   font-size: 18px;
   margin-top:180px;
   margin-left: 45em;
-  z-index: 2;
+  z-index: 1;
 }
 
 .nombrePiloto{
@@ -119,16 +123,19 @@ table{
 }
 
 .puntos_seccion{
+
   float: left;
   height: fit-content;
-  margin-top: 23em;
+  margin-top: 3em;
   margin-left: 5em;
+  z-index: 2;
 }
 
 .contenedor_info_posicion{
   display: flex;
   height: 3em;
 }
+
 .div_posicion{
   float: left;
 }
@@ -210,3 +217,23 @@ table{
   margin-left: 20em;
 }
 
+.row{
+  display: flex;
+}
+
+.div5{
+  margin-top: 17%;
+  width: 40%;
+  border: solid 3px yellow;
+  flex: 40%;
+  /* position: absolute; */
+
+}
+.puntosPiloto{
+  flex: 60%;
+  /* position:relative; */
+}
+
+.select{
+  margin-right: 4%;
+}

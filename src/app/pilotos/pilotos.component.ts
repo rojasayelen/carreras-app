@@ -46,7 +46,8 @@ export class PilotosComponent implements OnInit {
   }
 
   elegir(pil: Pilotos){ //ok
-    const datoNombre = this.pilu;
+    let datoNombre = {};
+    datoNombre = this.pilu;
     this.ver = true;
     this.verSelect = false;
   }

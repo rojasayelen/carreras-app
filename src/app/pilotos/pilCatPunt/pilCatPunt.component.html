@@ -1,10 +1,15 @@
+<div class="mostrarPiloto">
+  <div class="mostrarDatos">
+    <div class="nombre">{{ datoNombre.nombrePiloto }}</div>
+    <div class="apellido">{{ datoNombre.nombrePiloto }}</div>
+  </div>
 
-<div class="cardsGrid">
-  <div class="card" *ngFor="let dat of pilCatPunt" >
-    <li class="contentCard">
-      <div>{{dat.idCategoriaPilCatPunt}}</div>
-      <div class="puntos">{{dat.puntosActPilCantPunt}}</div>
-    </li>
+  <div class="cardsGrid">
+    <div class="card" *ngFor="let dat of pilCatPunt">
+      <li class="contentCard">
+        <div class="categ">{{ dat.idCategoriaPilCatPunt }}</div>
+        <div class="puntos">{{ dat.puntosActPilCantPunt }}</div>
+      </li>
+    </div>
   </div>
 </div>
-

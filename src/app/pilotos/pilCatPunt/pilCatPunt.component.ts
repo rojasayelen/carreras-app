@@ -60,7 +60,7 @@ export class PilCatPuntComponent implements OnInit {
 
       this.pilCatPuntService.obtenerPilCatPuntxPil(nombrePiloto).subscribe((
         dato: PilCatPunt[]) => {this.pilCatPunt = dato;
-          console.log(this.pilCatPunt, 'esto es el dato')
+          // console.log(this.pilCatPunt, 'esto es el dato')
         // let categAr = [''];
         // let puntosAr = [''];
 
