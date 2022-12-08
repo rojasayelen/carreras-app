@@ -38,6 +38,7 @@
 
 .categ{
   color: white;
+  line-height: 30px;
 }
 
 .puntos{
@@ -53,5 +54,5 @@
 
 .mostrarDatos{
   padding-bottom: 5%;
-
 }
+

@@ -24,8 +24,8 @@
 }
 
 .div3 h1{
-  background-color: blueviolet;
-  border: 3px solid green;
+  /* background-color: blueviolet;
+  border: 3px solid green; */
   margin-left: 600px;
   margin-top: 35px;
   font-size: 20px;
@@ -35,8 +35,8 @@
 }
 
 .div4{
-  background-color: aquamarine;
-  border: 3px solid red;
+  /* background-color: aquamarine;
+  border: 3px solid red; */
   position: absolute;
   height: fit-content;
   color: #e87867;
@@ -224,7 +224,7 @@ table{
 .div5{
   margin-top: 17%;
   width: 40%;
-  border: solid 3px yellow;
+  /* border: solid 3px yellow; */
   flex: 40%;
   /* position: absolute; */
 
