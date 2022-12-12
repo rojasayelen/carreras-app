@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PilCatPunt } from './pilCatPunt';
+import { PilotosService } from '../pilotos.service';
+import { Pilotos } from '../pilotos';
 
 
 @Injectable({
@@ -23,5 +25,9 @@ export class PilCatPuntService{
 
   obtenerPilCatPunt():Observable<PilCatPunt[]>{
     return this.httpClient.get<PilCatPunt[]>(`${this.baseURL}`);
+  }
+
+  obtenerPilotos(): Observable<Pilotos[]>{
+    return this.httpClient.get<Pilotos[]>(`${this.baseURL}`);
   }
 }

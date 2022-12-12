@@ -1,9 +1,11 @@
-import { Component, Input, Output,OnInit } from '@angular/core';
+import { Component, Input, Output,OnInit, EventEmitter } from '@angular/core';
 import { PilCatPuntService } from './pilCatPunt.service';
 import { PilCatPunt } from './pilCatPunt';
 import { Router } from '@angular/router';
 import { Pilotos } from '../pilotos';
 import { PilotosService } from '../pilotos.service';
+import { ConditionalExpr } from '@angular/compiler';
+import { NumberFormatStyle } from '@angular/common';
 
 @Component({
   selector: 'app-pilCatPunt',
@@ -14,7 +16,13 @@ export class PilCatPuntComponent implements OnInit {
 
   @Input() datoNombre: any;
   @Output() newDatoNombre: any;
+  @Output() saludo:EventEmitter<string> = new EventEmitter<string>();
 
+  onNameClick(){
+    this.saludo.emit('probando comunicación desde el hijo al padre');
+  }
+
+  public page!: number;
 
   ngOnInit(): void {
     // console.log(this.datoNombre, 'datoNombre desde ngOnInit');
@@ -52,44 +60,17 @@ export class PilCatPuntComponent implements OnInit {
       }
     ];
 
-    public traerPilotos(){//ok
-      this.pilotoService.obtenerPilotos().subscribe(dato =>{this.piloto = dato});
+    public traerPilotos(){
+      this.pilotoService.obtenerPilotos().subscribe(dato =>{
+        this.piloto = dato;
+      });
     }
 
     traerPilCatPunt(nombrePiloto:string){
-
       this.pilCatPuntService.obtenerPilCatPuntxPil(nombrePiloto).subscribe((
         dato: PilCatPunt[]) => {this.pilCatPunt = dato;
-          // console.log(this.pilCatPunt, 'esto es el dato')
-        // let categAr = [''];
-        // let puntosAr = [''];
-
-          // for(let dato of this.pilCatPunt){
-          //   // console.log(dato, 'dato del for');
-          //   const categorias = categAr.push(this.datoNombre.idCategoriaPilCatPunt);
-          //   const puntos = puntosAr.push(this.datoNombre.puntajeActPiloto);
-          //   console.log(categorias, puntos,  'categorias y puntos despues del push')
-          // }
-          //console.log(categAr[0], puntosAr[0], 'arrays');
-
-
-
-        // for(let i=0; i<= 1000; i++){
-        //   categArray[i] = this.datoNombre.idCategoriaPilCatPunt;
-        //   puntosArray[i] = this.datoNombre.puntajeActPiloto;
-        //   console.log(categArray[0], puntosArray[0]);
-        // }
-
       })
     }
-    // consulta(){
-    //   const categArray = [];
-    //   const puntosArray = [];
-    //   for(let i=0; i<= this.pilCatPunt.length; i++){
-    //     categArray[i] = this.pilCatPunt;
-    //     puntosArray[i] = this.pilCatPunt;
-    //   }
-    // }
 
  }
 

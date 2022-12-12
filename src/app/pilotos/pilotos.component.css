@@ -97,16 +97,24 @@ table{
 .navegadorPilotos {
   position: fixed;
   margin-top: 160px;
-  margin-left: 50px;
+  margin-left: 700px;
 }
 
 .pilotoAnterior {
-  transform: rotate(180deg);
-  margin-left: 650px;
+  font-size: 3em;
+  font-weight: bold;
+  color: #e87867;
+  background-color: transparent;
+  border: none;
+
 }
 
 .pilotoSiguiente {
-  margin-left: -20px;
+  font-size: 3em;
+  font-weight: bold;
+  color: #e87867;
+  background-color: transparent;
+  border: none;
 }
 
 .atras {

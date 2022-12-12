@@ -8,23 +8,16 @@
 
     <div class="main">
       <div class="div4">
-        <label> SIGUIENTE PILOTO </label>
-      </div>
+        <label>Siguiente Piloto</label>
+    </div>
 
       <div class="navegadorPilotos">
-        <a>
-          <img
-            class="pilotoAnterior"
-            src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png"
-          />
-        </a>
-        <a>
-          <img
-            class="pilotoSiguiente"
-
-            src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png"
-          />
-        </a>
+        <button class="pilotoAnterior">
+          <
+        </button>
+        <button class="pilotoSiguiente">
+          >
+        </button>
         <a>
           <img
             class="atras"
@@ -46,8 +39,16 @@
         </div>
 
         <div class="div5">
+          <!-- <app-pilCatPunt (saludo)="onNameClick($event)"></app-pilCatPunt> -->
 
-          <div class="table">
+
+            <div class="table">
+
+              <div *ngFor="let pilot of piloto | paginate: { itemsPerPage: 1, currentPage: page }">
+                {{pilot.nombrePiloto}}
+              </div>
+
+            </div>
 
               <select class="select" name="miSelect" [(ngModel)]="pilu">
                 <option [ngValue]="pilot" *ngFor="let pilot of piloto">
@@ -58,8 +59,6 @@
             <button  class="button" (click)="elegir(pilu)">
               Buscar Piloto
             </button>
-          </div>
-
 
           <div class="puntos_seccion">
             <div class="contenedor_info_posicion" >
@@ -75,17 +74,24 @@
             <div class="contenedor_info_puntos">
               <div class="div_puntos">
                 <h3>PTS</h3>
-                <p class="puntos">8.971,50</p>
+                <p class="puntos" (ngModel)="pilu">{{pilu.puntajeActPiloto}}</p>
               </div>
             </div>
             <div class="div_puntos_ant">
               <h3>PUNTOS ANT: </h3>
-              <p class="puntos_ant">8.928</p>
+              <p class="puntos_ant">{{pilu.puntajeAntPiloto}}</p>
             </div>
           </div>
         </div>
+        </div>
+        <!-- <pagination-controls (pageChange)="page = $event"  previousLabel="<" nextLabel=">"></pagination-controls> -->
       </div>
+
+
     </div>
+
   </div>
-</div>
+
+
+
 
