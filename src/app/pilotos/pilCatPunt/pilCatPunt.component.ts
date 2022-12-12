@@ -15,12 +15,12 @@ import { NumberFormatStyle } from '@angular/common';
 export class PilCatPuntComponent implements OnInit {
 
   @Input() datoNombre: any;
-  @Output() newDatoNombre: any;
-  @Output() saludo:EventEmitter<string> = new EventEmitter<string>();
+  // @Output() newDatoNombre: any;
+  // @Output() saludo:EventEmitter<string> = new EventEmitter<string>();
 
-  onNameClick(){
-    this.saludo.emit('probando comunicación desde el hijo al padre');
-  }
+  // onNameClick(){
+  //   this.saludo.emit('probando comunicación desde el hijo al padre');
+  // }
 
   public page!: number;
 

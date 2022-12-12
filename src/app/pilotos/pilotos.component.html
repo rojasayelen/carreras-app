@@ -19,10 +19,7 @@
           >
         </button>
         <a>
-          <img
-            class="atras"
-            src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png"
-          />
+          <img class="atras" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png"/>
         </a>
         <a>
           <a routerLink="/home" class="buttom"></a>
@@ -39,18 +36,14 @@
         </div>
 
         <div class="div5">
-          <!-- <app-pilCatPunt (saludo)="onNameClick($event)"></app-pilCatPunt> -->
-
 
             <div class="table">
-
               <div *ngFor="let pilot of piloto | paginate: { itemsPerPage: 1, currentPage: page }">
-                {{pilot.nombrePiloto}}
+                <!-- {{pilot.nombrePiloto}} -->
               </div>
-
             </div>
-
-              <select class="select" name="miSelect" [(ngModel)]="pilu">
+            <div *ngIf="ver != true">
+              <select  class="select" name="miSelect" [(ngModel)]="pilu">
                 <option [ngValue]="pilot" *ngFor="let pilot of piloto">
                   {{ pilot.nombrePiloto }}
                 </option>
@@ -59,6 +52,7 @@
             <button  class="button" (click)="elegir(pilu)">
               Buscar Piloto
             </button>
+          </div>
 
           <div class="puntos_seccion">
             <div class="contenedor_info_posicion" >
