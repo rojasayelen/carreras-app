@@ -21,6 +21,7 @@ const routes: Routes = [
   {path:'noticias', component:NoticiasComponent},
   {path: 'pilcatpunt', component:PilCatPuntComponent},
   {path:'', redirectTo:'home', pathMatch:'full'},
+  {path:'#1', redirectTo:'pilotos', component:PilotosComponent},
 
 ];
 

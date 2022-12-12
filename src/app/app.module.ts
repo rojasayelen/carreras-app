@@ -20,7 +20,7 @@ import { CategoriasTablasComponent } from './categorias-tablas/categorias-tablas
 import { CategoriasComponent } from './helpers/categorias/categorias.component';
 import { PilCatPuntComponent } from './pilotos/pilCatPunt/pilCatPunt.component';
 import { FormsModule } from '@angular/forms';
-import { VistaRankingComponent } from './vista-ranking/vista-ranking.component';
+
 
 const router: Routes = [
   {path:'home', component:HomeComponent},
@@ -48,8 +48,7 @@ const router: Routes = [
     CategoriasTablasComponent,
     CategoriasSponsorsComponent,
     CategoriasComponent,
-    PilCatPuntComponent,
-    VistaRankingComponent
+    PilCatPuntComponent
     ],
   imports: [
     BrowserModule,

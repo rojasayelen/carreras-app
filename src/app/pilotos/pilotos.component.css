@@ -120,6 +120,7 @@ table{
 .atras {
   margin-left: 20vw;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 
 .adelante {

@@ -11,7 +11,7 @@ import { RankingService } from '../services/ranking.service';
   templateUrl: './ranking.tabla.component.html',
   styleUrls: ['./ranking.tabla.component.css']
 })
-export class VistaRankingComponent implements OnInit {
+export class RankingTablaComponent implements OnInit {
 
   public pilCatPunt: PilCatPunt[] = [];
 

@@ -63,7 +63,9 @@ export class PilotosComponent implements OnInit {
     this.verSelect = false;
   }
 
-
+  reload(){
+    window.location.reload();
+  }
 
   // pilotoPrevio(): void{
   //   this.pilotoService.obtenerPilotos().subscribe(dato => {
