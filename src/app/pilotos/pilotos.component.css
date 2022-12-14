@@ -24,8 +24,8 @@
 }
 
 .div3 h1{
-  /* background-color: blueviolet;
-  border: 3px solid green; */
+  /* background-color: blueviolet;*/
+  border: 3px solid green;
   margin-left: 600px;
   margin-top: 35px;
   font-size: 20px;
@@ -35,59 +35,26 @@
 }
 
 .div4{
-  /* background-color: aquamarine;
-  border: 3px solid red; */
   position: absolute;
   height: fit-content;
   color: #e87867;
   font-weight: bold;
   font-size: 18px;
-  margin-top:180px;
-  margin-left: 45em;
+  margin-top:120px;
+  margin-left: 60em;
   z-index: 1;
+  border:rgb(50, 161, 205) 5px solid;
+
 }
 
-.nombrePiloto{
-  margin-top: 18vh;
-  margin-left: 20vw;
-  z-index: 3;
-}
-
-.nombre{
-  margin-bottom: 0;
-  font-size: 55pt;
-  line-height: 1.15em;
-  font-weight: lighter;
-}
-
-.apellido{
-  font-size: 80pt;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.categoriasPiloto{
-  position: fixed;
-  width: 45%;
-  margin-top: 5vh;
-  margin-left: 20vw;
-  margin-right: 20vw  ;
-  margin-bottom: 1px;
-  padding-bottom: 1px;
-  z-index: 1;
-}
-
-table{
-  width: 60%;
-  font-size: 18px;
-  text-align: center;
-  height: 280px;
-}
-
-.puntos{
-  color: #e87867;
-  font-weight: bold;
-
+.search{
+  border-radius: 10px;
+  border: #e87867 0.5px solid;
+  background-color: black;
+  color: white;
+  height: 10px;
+  padding: 10px;
+  margin-top: 5px;
 }
 
 .navegadorPilotos img {
@@ -96,8 +63,8 @@ table{
 
 .navegadorPilotos {
   position: fixed;
-  margin-top: 160px;
-  margin-left: 700px;
+  margin-top: 110px;
+  margin-left: 60em;
 }
 
 .pilotoAnterior {
@@ -132,15 +99,16 @@ table{
 }
 
 .puntos_seccion{
-
+  border: solid 3px goldenrod;
   float: left;
   height: fit-content;
   margin-top: 3em;
-  margin-left: 5em;
+
   z-index: 2;
 }
 
 .contenedor_info_posicion{
+  border: 4px cyan solid;
   display: flex;
   height: 3em;
 }
@@ -219,30 +187,90 @@ table{
 
 .main{
   width: 96vw;
-}
-
-.tabla{
-  margin-top: 15em;
-  margin-left: 20em;
-}
-
-.row{
   display: flex;
 }
 
 .div5{
   margin-top: 17%;
   width: 40%;
-  /* border: solid 3px yellow; */
   flex: 40%;
-  /* position: absolute; */
+  border: solid 3px yellow;
 
 }
+
 .puntosPiloto{
-  flex: 60%;
-  /* position:relative; */
+  margin-top: 10%;
+  margin-left: 13%;
+  border: solid 2px blueviolet;
+
 }
 
 .select{
   margin-right: 4%;
+}
+
+/* CSS de la tabla de puntos y categorias */
+
+.row{
+  flex: 100%;
+  border: solid 2px rgb(205, 50, 179);
+}
+
+
+.nombre {
+  font-size: 60px;
+  font-weight:200;
+  text-transform: uppercase;
+  margin-left: 130px;
+  line-height: normal;
+}
+
+.apellido{
+  font-size: 80px;
+  font-weight:bold;
+  text-transform: uppercase;
+  margin-left: 150px;
+  line-height: 80px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 75px);
+  justify-content: center;
+}
+
+.card{
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentCard{
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+
+}
+
+.categ{
+  color: white;
+  line-height: 40px;
+}
+
+.puntos{
+  color: #e87867;
+}
+
+.mostrarPiloto{
+  /* border: blue solid 3px; */
+  /* width: 600px; */
+  margin-top: 5em;
+  margin-left: 80px;
+}
+
+.mostrarDatos{
+  padding-bottom: 5%;
 }

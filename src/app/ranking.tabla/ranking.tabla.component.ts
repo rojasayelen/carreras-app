@@ -23,7 +23,9 @@ export class RankingTablaComponent implements OnInit {
 
   public nombreFiltrado: any = [];
 
-  constructor(private rankingService: RankingService, private pilotoService: PilotosService) { }
+  constructor(
+    private rankingService: RankingService,
+    private pilotoService: PilotosService) { }
 
   ngOnInit(): void {
     this.verPilotos();

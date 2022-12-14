@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { Pilotos } from './pilotos';
 import { PilotosService } from './pilotos.service';
-
 import { PilCatPunt } from './pilCatPunt/pilCatPunt';
-import { PilCatPuntComponent } from './pilCatPunt/pilCatPunt.component';
-import { PilCatPuntService } from './pilCatPunt/pilCatPunt.service';
+import { NgForm } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 
 
@@ -17,15 +17,19 @@ import { PilCatPuntService } from './pilCatPunt/pilCatPunt.service';
 
 })
 export class PilotosComponent implements OnInit {
+  Subject: any;
 
-  onNameClick(message: string){
-    console.log(message);
+  // @Input() nombre: string ='';
+  // @Output() onEnter   : EventEmitter<string> = new EventEmitter();
+
+  searchColumn(value: string): void {
+    console.log('value', value);
+    this.traerPilCatPunt(value);
   }
-  verSelect:boolean=true;
-  ver:boolean=false;
 
-  public page!: number;
+  // public page!: number;
 
+  piloto: Pilotos[] = [];
   pilu = {
     idPiloto:0,
     nombrePiloto:'',
@@ -34,38 +38,64 @@ export class PilotosComponent implements OnInit {
     puntajeAntPiloto:0,
     puntajeActPiloto:0
  }
-
-  piloto: Pilotos[] = [];
+  puntos: PilCatPunt[] = [];
+  punto = {
+      idPilCatPunt:0,
+      nombrePilotoPilCatPunt:'',
+      idCategoriaPilCatPunt:'',
+      puntosAntPilCantPunt:0,
+      puntosActPilCantPunt:0,
+     }
 
   constructor(
-    private pilotoService:PilotosService,
     private router:Router,
-    private pilcatpuntService: PilCatPuntService ) {}
+    private pilotoService:PilotosService) {}
 
   ngOnInit(): void {
+    this.Subject.pipe(debounceTime(500))
+    .subscribe((search: any) => {
+      this.searchColumn(search);
+  });
     this.traerPilotos();
   }
 
   public traerPilotos(){
-    this.pilotoService.obtenerPilotos().subscribe(dato =>{this.piloto = dato});
+    this.pilotoService.obtenerPilotos().subscribe(dato =>{
+      this.piloto = dato;
+      let primerPiloto = this.piloto[0];
+      // this.traerPilCatPunt(primerPiloto.nombrePiloto);
+    });
   }
 
-  elegir(pil: Pilotos){
-    let datoNombre = {};
-    let datoPuntajeAnterior = {};
-    let datoPuntajeActual = {};
-    datoNombre = this.pilu;
-    datoPuntajeAnterior = this.pilu.puntajeAntPiloto;
-    datoPuntajeActual = this.pilu.puntajeActPiloto;
-    console.log('puntos actuales', datoPuntajeActual);
-    console.log('puntaje anterior', datoPuntajeAnterior);
-    this.ver = true;
-    this.verSelect = false;
+  public traerPilCatPunt(nombre: string){
+
+    this.pilotoService.obtenerPilCatPuntxPil(nombre).subscribe(
+      (dato: PilCatPunt[]) => {this.puntos = dato;
+      console.log('this.puntos', this.puntos);
+      this.punto = this.puntos[0];
+      }
+    )
   }
 
-  reload(){
-    window.location.reload();
-  }
+
+
+  // elegir(f: NgForm){
+  //   console.log('este es el f.value', f.value.miSelect.nombrePiloto );
+    // let datoNombre = {};
+    // let datoPuntajeAnterior = {};
+    // let datoPuntajeActual = {};
+    // datoNombre = this.pilu;
+    // datoPuntajeAnterior = this.pilu.puntajeAntPiloto;
+    // datoPuntajeActual = this.pilu.puntajeActPiloto;
+    // console.log('puntos actuales', datoPuntajeActual);
+    // console.log('puntaje anterior', datoPuntajeAnterior);
+    // this.ver = true;
+    // this.verSelect = false;
+  // }
+
+  // reload(){
+  //   window.location.reload();
+  // }
 
   // pilotoPrevio(): void{
   //   this.pilotoService.obtenerPilotos().subscribe(dato => {
