@@ -25,7 +25,7 @@
 
 .div3 h1{
   /* background-color: blueviolet;*/
-  border: 3px solid green;
+  /* border: 3px solid green; */
   margin-left: 600px;
   margin-top: 35px;
   font-size: 20px;
@@ -99,7 +99,7 @@
 }
 
 .puntos_seccion{
-  border: solid 3px goldenrod;
+  /* border: solid 3px goldenrod; */
   float: left;
   height: fit-content;
   margin-top: 3em;
@@ -108,7 +108,7 @@
 }
 
 .contenedor_info_posicion{
-  border: 4px cyan solid;
+  /* border: 4px cyan solid; */
   display: flex;
   height: 3em;
 }
@@ -194,15 +194,13 @@
   margin-top: 17%;
   width: 40%;
   flex: 40%;
-  border: solid 3px yellow;
-
+  /* border: solid 3px yellow; */
 }
 
 .puntosPiloto{
   margin-top: 10%;
   margin-left: 13%;
-  border: solid 2px blueviolet;
-
+  /* border: solid 2px blueviolet; */
 }
 
 .select{
@@ -213,7 +211,7 @@
 
 .row{
   flex: 100%;
-  border: solid 2px rgb(205, 50, 179);
+  /* border: solid 2px rgb(205, 50, 179); */
 }
 
 
