@@ -18,7 +18,6 @@ import { RankingSponsorsComponent } from './ranking.sponsors/ranking.sponsors.co
 import { RankingTablaComponent } from './ranking.tabla/ranking.tabla.component';
 import { CategoriasTablasComponent } from './categorias-tablas/categorias-tablas.component';
 import { CategoriasComponent } from './helpers/categorias/categorias.component';
-import { PilCatPuntComponent } from './pilotos/pilCatPunt/pilCatPunt.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -31,7 +30,6 @@ const router: Routes = [
   {path:'categorias-tabla', component:CategoriasTablasComponent},
   {path:'noticias', component:NoticiasComponent},
   {path:'menu', component:MenuComponent},
-  {path: 'pilCatPunt', component:PilCatPuntComponent},
   {path:'', redirectTo:'home', pathMatch:'full'}
 ];
 
@@ -48,7 +46,7 @@ const router: Routes = [
     CategoriasTablasComponent,
     CategoriasSponsorsComponent,
     CategoriasComponent,
-    PilCatPuntComponent
+
     ],
   imports: [
     BrowserModule,

@@ -27,6 +27,7 @@ export class PilotosComponent implements OnInit {
     this.traerPilCatPunt(value);
   }
 
+
   // public page!: number;
 
   piloto: Pilotos[] = [];
