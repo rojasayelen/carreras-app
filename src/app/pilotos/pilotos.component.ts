@@ -98,15 +98,15 @@ export class PilotosComponent implements OnInit {
   //   window.location.reload();
   // }
 
-  // pilotoPrevio(): void{
-  //   this.pilotoService.obtenerPilotos().subscribe(dato => {
-  //     let datoPiloto = dato.filter(item => item.nombrePiloto == this.pilu.nombrePiloto);
-  //     // let getPiloto = datoPiloto.find(item => item.idPiloto == this.pilu.idPiloto);
-  //     let index = datoPiloto.findIndex(item => item == this.pilu);
-  //     let indexPrevio: number = index != 0 ? index -1 : datoPiloto.length - 1;
-  //     // let idPrevio: number = datoPiloto[indexPrevio].idPiloto;
-  //     // this.pilu.idPiloto = idPrevio;
-  //     console.log(`este es el index = ${index}`, index);
-  //     });
-  // }
+  pilotoPrevio(): void{
+    this.pilotoService.obtenerPilotos().subscribe(dato => {
+      let datoPiloto = dato.filter(item => item.nombrePiloto == this.pilu.nombrePiloto);
+      // let getPiloto = datoPiloto.find(item => item.idPiloto == this.pilu.idPiloto);
+      let index = datoPiloto.findIndex(item => item == this.pilu);
+      let indexPrevio: number = index != 0 ? index -1 : datoPiloto.length - 1;
+      // let idPrevio: number = datoPiloto[indexPrevio].idPiloto;
+      // this.pilu.idPiloto = idPrevio;
+      console.log(`este es el index = ${index}`, index);
+      });
+  }
 }
