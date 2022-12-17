@@ -5,8 +5,10 @@ import { Pilotos } from './pilotos';
 import { PilotosService } from './pilotos.service';
 import { PilCatPunt } from './pilCatPunt/pilCatPunt';
 import { NgForm } from '@angular/forms';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, map, startWith } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 
 
@@ -27,6 +29,8 @@ export class PilotosComponent implements OnInit {
     this.traerPilCatPunt(value);
   }
 
+  control = new FormControl();
+  filPilotos!: Observable<Pilotos[]>;
 
   // public page!: number;
 
@@ -53,18 +57,23 @@ export class PilotosComponent implements OnInit {
     private pilotoService:PilotosService) {}
 
   ngOnInit(): void {
-    this.Subject.pipe(debounceTime(500))
-    .subscribe((search: any) => {
-      this.searchColumn(search);
-  });
+    this.punto.nombrePilotoPilCatPunt[0];
+  //   this.Subject.pipe(debounceTime(500))
+  //   .subscribe((search: any) => {
+  //     this.searchColumn(search);
+  // });
     this.traerPilotos();
-  }
+    this.filPilotos = this.control.valueChanges.pipe(
+      debounceTime(500),
+      startWith(''),
+      map(value => this._filter(value)));
+    }
 
   public traerPilotos(){
     this.pilotoService.obtenerPilotos().subscribe(dato =>{
       this.piloto = dato;
       let primerPiloto = this.piloto[0];
-      // this.traerPilCatPunt(primerPiloto.nombrePiloto);
+      this.traerPilCatPunt(primerPiloto.nombrePiloto);
     });
   }
 
@@ -78,7 +87,13 @@ export class PilotosComponent implements OnInit {
     )
   }
 
-
+  private _filter(value:string): Pilotos[]{
+    const formatValue = value.toLocaleLowerCase();
+    return this.piloto.filter(value => value.nombrePiloto.toLocaleLowerCase().includes(formatValue))
+    // return this.piloto._filter(pilotoFiltrado =>
+    //   pilotoFiltrado.nombrePiloto.toLocaleLowerCase()
+    //   .indexOf(formatValue) === 0);
+    }
 
   // elegir(f: NgForm){
   //   console.log('este es el f.value', f.value.miSelect.nombrePiloto );

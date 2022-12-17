@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { RouterModule, Routes } from '@angular/router';
@@ -18,7 +21,7 @@ import { RankingSponsorsComponent } from './ranking.sponsors/ranking.sponsors.co
 import { RankingTablaComponent } from './ranking.tabla/ranking.tabla.component';
 import { CategoriasTablasComponent } from './categorias-tablas/categorias-tablas.component';
 import { CategoriasComponent } from './helpers/categorias/categorias.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const router: Routes = [
@@ -51,10 +54,14 @@ const router: Routes = [
   imports: [
     BrowserModule,
     MatSliderModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(router),
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     NgxPaginationModule
   ],
   providers: [],

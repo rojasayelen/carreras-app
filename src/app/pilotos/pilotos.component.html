@@ -14,13 +14,27 @@
       <div class="div4">
         <label>Siguiente Piloto</label>
         <form>
+          <mat-placeholder>
           <input class="search"
-            type="text"
+            type="text area"
+            matInput
+            [formControl]="control"
+            [matAutocomplete]="auto"
             name="nombre"
             (ngModel)="punto"
             placeholder="Buscar Piloto"
             #search (keyup)="searchColumn(search.value)"
           />
+          <!-- matInput -->
+
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let piloto of filPilotos | async" [value]="piloto">
+              {{piloto.nombrePiloto}}
+            </mat-option>
+          </mat-autocomplete>
+          </mat-placeholder>
+
+
         </form>
 
       </div>
@@ -44,18 +58,6 @@
       </div>
 
       <div class="div5">
-        <!-- <div>
-          <form #f="ngForm" (ngSubmit)="elegir(f)">
-            <select class="select" name="miSelect" [(ngModel)]="pilu">
-              <option [ngValue]="pilot" *ngFor="let pilot of piloto">
-                {{ pilot.nombrePiloto }}
-              </option>
-            </select>
-
-            <button class="button">Buscar Piloto</button>
-          </form>
-        </div> -->
-
         <div class="puntos_seccion">
           <div class="contenedor_info_posicion">
             <div class="div_posicion">
