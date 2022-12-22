@@ -1,14 +1,6 @@
-.div1{
-  border: 2px solid #e87867;
-  border-radius: 10px;overflow: hidden;
-  min-height: 94vh;
-  width: 96vw;
-  margin: 1vh 1vw;
-  display: flex;
-  justify-content: center;
-  padding: 1.5vh 1vw;
-  position: relative;
-}
+/* h5{
+  padding-bottom: 0.5em;
+} */
 
 .div2{
   height: 94vh;
@@ -18,7 +10,6 @@
   border-radius: 10px;
   position: relative;
   z-index: 0;
-
 }
 
 .semicircle {
@@ -73,15 +64,15 @@
 
 #sidebar {
   background-color: #0b0a0a;
-  width: 50%;
-  height: 555px;
+  width: 43%;
+  height: 90vh;
   display: inline-block;
-  margin: 10px 2px 20px;
+  padding: 10px 2px 20px;
   position: absolute;
-  right: 50px;
+  right: -4px;
   z-index: 60;
-  border-top: 1px solid blue;
-  border-right: 1px solid blue;
+  border-top: 1px solid black;
+  border: 1px solid rgb(197, 51, 51);
   transition: all 500ms linear;
 }
 
@@ -90,18 +81,16 @@
 }
 
 .left-column {
-  width: 40%;
+  width: 70%;
   height: 520px;
   background-color: #0b0a0a;
 }
 
 .left-column h3 {
-  position: relative;
-  top: 95px;
-  right: 0px;
+  padding-top: 1em;
   text-transform: uppercase;
   transform: rotate(0deg);
-  font-size: 18px;
+  font-size: 2em;
   margin-left: 5px;
 }
 
@@ -112,16 +101,12 @@
 }
 
 .notice-container {
-  width: 40%;
-  height: 80px;
+  width: 70%;
   background-color: #0b0a0a;
-  position: absolute;
   top: 120px;
-  margin: 15px 0 25px;
 }
 
 .notice-container h5 {
-  position: absolute;
   left: 0px;
   font-size: 20px;
   top: 0px;
@@ -132,28 +117,17 @@
 }
 
 .notice-container p {
-  position: relative;
-  left: 0px;
-  top: 30px;
   font-size: 14px;
   text-transform: capitalize;
   margin-left: 5px;
 }
-h5{
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
+
 .notice-container2 {
-  width: 40%;
-  height: 80px;
+  width: 70%;
   background-color: #0b0a0a;
-  position: absolute;
-  top: 235px;
-  margin: 15px 0 25px;
 }
 
 .notice-container2 h5 {
-  position: absolute;
   left: 0px;
   font-size: 20px;
   top: 0px;
@@ -164,28 +138,18 @@ h5{
 }
 
 .notice-container2 p {
-  position: relative;
-  left: 0px;
-  top: 30px;
   font-size: 14px;
   text-transform: capitalize;
   margin-left: 5px;
 }
 
 .notice-container3 {
-  width: 40%;
-  height: 80px;
-  background-color: #0b0a0a;
-  position: absolute;
-  top: 350px;
-  margin: 15px 0 25px;
+  width: 70%;
+  background-color: #141111;
 }
 
-.notice-container3 h5 {
-  position: absolute;
-  left: 0px;
+.notice-container3 h5{
   font-size: 20px;
-  top: 0px;
   background-color: #0b0a0a;
   color: #e87867;
   text-transform: uppercase;
@@ -193,19 +157,13 @@ h5{
 }
 
 .notice-container3 p {
-  position: relative;
-  left: 0px;
-  top: 30px;
   font-size: 14px;
   text-transform: capitalize;
   margin-left: 5px;
 }
 
 #copy{
-  position: absolute;
-  width: 40%;
-  left: 0px;
-  top: 500px;
+  width: 70%;
   font-size: 14px;
   text-transform: uppercase;
   margin-left: 5px;
@@ -213,8 +171,7 @@ h5{
 
 .right-column {
   position: absolute;
-  width: 60%;
-  height: 520px;
+  width: 30%;
   background-color: #0b0a0a;
   top: 0px;
   right: 0px;
@@ -270,150 +227,3 @@ h5{
   right: -100px;
   top: -80px;
 }
-
-
-/* ************************************** */
-
-#menuToggle
-{
-  display: block;
-  position: absolute;
-   /* top: 50%; */
-  right: 50px;
-
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  font-weight: bold;
-  color: #E87867;
-}
-
-
-#menuToggle input
-{
-  display: bock;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: #cdcdcd;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu{
-  position: absolute;
-  left: 135px;
-  width: 240px; /*ancho menú*/
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 100px;
-  text-align: left;
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* TODO: to stop flickering of text in safari */
-
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it
- */
-#menuToggle input:not(:checked) ~ ul
-{
-  transform: none;
-}
-
