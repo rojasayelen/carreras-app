@@ -10,7 +10,7 @@
       <div class="left-column">
         <h3>ultima semana</h3>
         <div class="notice-container">
-          <div *ngFor="let noti of noticia; let i = index" >
+          <div *ngFor="let noti of noticia | paginate: { itemsPerPage: 3, currentPage: pages }; index as i">
             <h5>comentario #{{i+1}}</h5>
             <div class="cuerpoNoticia">{{noti.cuerpoNoticia}}</div>
           </div>

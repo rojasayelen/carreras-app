@@ -5,6 +5,7 @@ import { NoticiasService } from './noticias.service';
 import { Noticias } from './noticias';
 import { trigger, style, transition, animate, state } from '@angular/animations';
 
+
 @Component({
   selector: 'app-noticias',
   templateUrl: './noticias.component.html',
@@ -36,6 +37,7 @@ export class NoticiasComponent implements OnInit {
     this.verNoticias();
   }
 
+  pages = 1;
   noticia: Noticias[] = [];
 
   public verNoticias(){
