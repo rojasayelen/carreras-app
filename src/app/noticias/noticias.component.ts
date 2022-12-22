@@ -3,12 +3,28 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { NoticiasService } from './noticias.service';
 import { Noticias } from './noticias';
+import { trigger, style, transition, animate, state } from '@angular/animations';
 
 @Component({
   selector: 'app-noticias',
   templateUrl: './noticias.component.html',
-  styleUrls: ['./noticias.component.css']
+  styleUrls: ['./noticias.component.css'],
+  animations: [
+    trigger('enterState',[
+      state('void',style({
+        transform:'translateX(100%)',
+        opacity:0
+      })),
+      transition(':enter',[
+        animate(400, style({
+          transform:'translateX(0%)',
+          opacity:1
+        }))
+      ])
+    ])
+  ]
 })
+
 export class NoticiasComponent implements OnInit {
 
   constructor(
@@ -17,6 +33,7 @@ export class NoticiasComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.verNoticias();
   }
 
   noticia: Noticias[] = [];
@@ -25,9 +42,13 @@ export class NoticiasComponent implements OnInit {
     this.noticiasService.obtenerNoticias().subscribe(
       (dato => {
         this.noticia = dato;
-        let primeraNoticia = this.noticia[0];
+        console.log('dato antes de sort', dato);
+
+        //ordenar el array por fechas y mostrar de a 3 en las cards
+        //console.log('dato despues de sort', dato.sort((a,b) => b.fechaNoticia.getDate() - a.fechaNoticia.getDate()));
 
       })
     )
   }
+
 }
