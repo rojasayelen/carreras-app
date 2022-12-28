@@ -77,20 +77,24 @@
 }
 
 .pilotoAnterior {
+  margin-top: 1vh;
+  margin-left: 1vw;
   font-size: 3em;
   font-weight: bold;
   color: #e87867;
   background-color: transparent;
-  border: none;
+  border: solid 2x red;
   cursor: pointer;
 }
 
 .pilotoSiguiente {
+  margin-top: 1vh;
+  margin-left: 4vw;
   font-size: 3em;
   font-weight: bold;
   color: #e87867;
   background-color: transparent;
-  border: none;
+  border: solid 2px blue;
   cursor:pointer;
 }
 

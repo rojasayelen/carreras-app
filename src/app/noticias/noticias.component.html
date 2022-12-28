@@ -6,12 +6,8 @@
             <div class="sem1"><h3>ÚLTIMA SEMANA</h3></div>
             <div class="sem2"><h3>PRÓXIMA SEMANA</h3></div>
           </div>
-          <div>
-            <span class="equis">
-              <!-- <button (onclick)="cerrar()">X</button> -->
-          </span>
-        </div>
-          <div>
+
+          <div class="divNoticias">
             <div class="bloqueNoticias" *ngFor="let noti of noticia | paginate: { itemsPerPage: 3, currentPage: pages}; index as i">
               <tbody>
                 <div class="titulo"><th>COMENTARIO #{{i+1}}</th><br></div>
@@ -25,18 +21,6 @@
             </div>
         </div>
 
-        </div>
-
-      </div>
-      <div class="footer">
-        <div class="copy">
-          <p>COPYRIGHT CARRERAS 2022</p>
-        </div>
-        <div class="redes">
-          <p>Fb</p>
-          <p>Ig</p>
-          <p>Ln</p>
-          <p>Tw</p>
         </div>
       </div>
 </div>

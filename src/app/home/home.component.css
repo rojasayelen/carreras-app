@@ -41,9 +41,6 @@ h1{
   margin-left: 80vw;
 }
 
-.adelante {
-  margin-left: 20px;
-}
 
 .semicircle {
   width: 50px;
@@ -93,7 +90,7 @@ h1{
 .equis {
   z-index: 60;
   height: 50px;
-  padding-left: 10px;
+  padding-left: 20px;
   z-index: 40;
   cursor: pointer;
 }
@@ -101,11 +98,13 @@ h1{
 button {
   background-color: transparent;
   color: #ffffff;
-  font-size: 53px;
+  font-size: 40px;
   font-weight: 200;
-  margin-left: 91vw;
+  margin-left: 88vw;
   margin-top: 40vh;
   position: fixed;
   z-index: 75;
   cursor:pointer;
+  height: 1em;
+  width: 1em;
 }

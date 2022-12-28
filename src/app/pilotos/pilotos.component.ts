@@ -29,9 +29,6 @@ export class PilotosComponent implements OnInit {
   control = new FormControl();
   filPilotos!: Observable<Pilotos[]>;
 
-  // public page!: number;
-
-  tablaPiloto: Pilotos[] = [];
   piloto: Pilotos[] = [];
   pilu = {
     idPiloto:0,
@@ -40,7 +37,7 @@ export class PilotosComponent implements OnInit {
     urlImgPiloto:'',
     puntajeAntPiloto:0,
     puntajeActPiloto:0
- }
+  }
   puntos: PilCatPunt[] = [];
   punto = {
       idPilCatPunt:0,
@@ -48,7 +45,7 @@ export class PilotosComponent implements OnInit {
       idCategoriaPilCatPunt:'',
       puntosAntPilCantPunt:0,
       puntosActPilCantPunt:0,
-     }
+  }
 
   constructor(
     private router:Router,
@@ -67,12 +64,21 @@ export class PilotosComponent implements OnInit {
       map(value => this._filter(value)));
     }
 
+  mostrarNoticias(){
+    this.mostrar = true;
+    console.log('esto es mostrar', this.mostrar);
+  }
+
+  cerrar(){
+    this.mostrar = false;
+    console.log('esto es cerrar desde noticias', this.mostrar);
+  }
+
   public traerPilotos(){
     this.pilotoService.obtenerPilotos().subscribe(dato =>{
       this.piloto = dato;
       let primerPiloto = this.piloto[0];
       this.traerPilCatPunt(primerPiloto.nombrePiloto);
-
     });
   }
 
@@ -89,158 +95,13 @@ export class PilotosComponent implements OnInit {
     console.log('el valor de value ',value);
     return this.piloto.filter(value =>
       value.nombrePiloto.toLocaleLowerCase().includes(this.formatValue));
-
-    // return this.piloto._filter(pilotoFiltrado =>
-    //   pilotoFiltrado.nombrePiloto.toLocaleLowerCase()
-    //   .indexOf(formatValue) === 0);
   }
 
-  consultas: any = [
-    {
-      'idPiloto': 1,
-      'nombrePiloto': 'Juan',
-      'puntos': [
-        {
-          'idCategoria':1,
-          'nombreCategoria': 'TR',
-          'puntosActuales': 15,
-          'puntosAnteriores': 0
-        },
-        {
-          'idCategoria':2,
-          'nombreCategoria': 'PC A',
-          'puntosActuales': 5,
-          'puntosAnteriores': 0
-        },
-        {
-          'idCategoria':3,
-          'nombreCategoria': 'PC B',
-          'puntosActuales': 15,
-          'puntosAnteriores': 0
-        },
-        {
-          'idCategoria':4,
-          'nombreCategoria': 'TC 2000',
-          'puntosActuales': 5,
-          'puntosAnteriores': 0
-        }
-      ]
-    },
-    {
-      'idPiloto': 2,
-      'nombrePiloto': 'Pedro',
-      'puntos':[
-        {
-          'idCategoria':1,
-          'nombreCategoria': 'TR',
-          'puntosActuales': 15,
-          'puntosAnteriores': 0
-        },
-        {
-          'idCategoria':2,
-          'nombreCategoria': 'PC A',
-          'puntosActuales': 5,
-          'puntosAnteriores': 0
-        },
-        {
-          'idCategoria':3,
-          'nombreCategoria': 'PC B',
-          'puntosActuales': 15,
-          'puntosAnteriores': 0
-        },
-        {
-          'idCategoria':4,
-          'nombreCategoria': 'TC 2000',
-          'puntosActuales': 5,
-          'puntosAnteriores': 0
-        }
-      ]
-    },
-    {
-      'idPiloto': 3,
-      'nombrePiloto': 'Patricia',
-      'puntos': [
-        {
-          'idCategoria':1,
-          'nombreCategoria': 'TR',
-          'puntosActuales': 5,
-          'puntosAnteriores': 0
-        },
-        {
-          'idCategoria':2,
-          'nombreCategoria': 'PC A',
-          'puntosActuales': 51,
-          'puntosAnteriores': 10
-        },
-        {
-          'idCategoria':3,
-          'nombreCategoria': 'PC B',
-          'puntosActuales': 15,
-          'puntosAnteriores': 10
-        },
-        {
-          'idCategoria':4,
-          'nombreCategoria': 'TC 2000',
-          'puntosActuales': 25,
-          'puntosAnteriores': 20
-        }
-      ]
-    },
-    {
-      'idPiloto': 4,
-      'nombrePiloto': 'Juan Martin',
-      'puntos': [
-        {
-          'idCategoria':1,
-          'nombreCategoria': 'TR',
-          'puntosActuales': 51,
-          'puntosAnteriores': 40
-        },
-        {
-          'idCategoria':2,
-          'nombreCategoria': 'PC A',
-          'puntosActuales': 35,
-          'puntosAnteriores': 30
-        },
-        {
-          'idCategoria':3,
-          'nombreCategoria': 'PC B',
-          'puntosActuales': 150,
-          'puntosAnteriores': 80
-        },
-        {
-          'idCategoria':4,
-          'nombreCategoria': 'TC 2000',
-          'puntosActuales': 59,
-          'puntosAnteriores': 10
-        }
-      ]
-    }
-]
-
-  public pilotoPrevio():void {
-      let datoPiloto = this.piloto.filter(item => item.nombrePiloto == this.formatValue);
-
-
-      console.log('dato formatValue', this.formatValue);
-      let getPiloto = datoPiloto.find(item => item.idPiloto == this.pilu.idPiloto);
-      //let index = datoPiloto.findIndex(item => item == getPiloto);
-      console.log('este es el dato')
-      // let indexPrevio: number = index != 0 ? index -1: datoPiloto.length - 1;
-      // let idPrevio: number = datoPiloto[indexPrevio].idPiloto;
-      // this.pilu.idPiloto = idPrevio;
-      console.log(`este es el index = ${datoPiloto}`, datoPiloto);
+  public pilotoPrevio(value: string):void {
+    let namePiloto = this.piloto.findIndex(item => item.nombrePiloto);
 
   }
 
-  mostrarNoticias(){
-    this.mostrar = true;
-    console.log('esto es mostrar', this.mostrar);
-  }
-  cerrar(){
-    this.mostrar=false;
-    console.log('esto es cerrar desde noticias', this.mostrar);
-  }
 }
 
 

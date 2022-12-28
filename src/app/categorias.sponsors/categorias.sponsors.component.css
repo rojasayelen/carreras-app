@@ -17,9 +17,9 @@
   vertical-align: middle;
   border-radius: 10px;
   position: relative;
-  background-image: url(../../assets/Categorías_Carreras.jpg);
+  /* background-image: url(../../assets/Categorías_Carreras.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   z-index: 0;
 }
 

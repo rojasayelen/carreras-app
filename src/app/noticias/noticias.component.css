@@ -7,11 +7,11 @@ div p{
 .noti {
   background-color: black;
   opacity: 0.93;
-  width: 30%;
+  width: 47%;
   height: 88vh;
-  display: inline-block;
+  /* display: inline-block; */
   position: absolute;
-  right: -4px;
+  right: 0;
   z-index: 60;
   border-top: 1px solid black;
   /* border: 3px solid rgb(197, 187, 51); */
@@ -21,29 +21,34 @@ div p{
 .semana {
   height: 10vh;
   width: 35vw;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   margin-top: 4em;
   margin-left: 0.07em;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sem1 {
   float: left;
-  width: 30%;
+  /* width: 35%; */
   position: relative;
+  font-size: 1em;
+  text-align: left;
 }
 
 .sem2{
   margin-left: 15vw;
   width: 35%;
   position: absolute;
-
 }
+
 .sem2 h3{
   font-size: 1em;
   color:darkgrey;
 }
+
 tbody {
   display: table-row-group;
 }
@@ -67,17 +72,17 @@ tbody {
 }
 
 .cuerpoNoticia{
-  font-size: 22px;
+  font-size: 18px;
   margin-top: 20px;
   width: 400px;
-  height: 80px;
+  height: 50px;
   padding-bottom: 10px;
   overflow-y: auto;
 }
 
 .fechaNoticia {
   width: 170px;
-  font-size: 20px;
+  font-size: 16px;
   color: #e87867;
   font-weight: bold;
   padding-left: 82px;
@@ -123,13 +128,19 @@ tbody {
   font-size: 20px;
 }
 
-.bloqueNoticias{
+/* .bloqueNoticias{
   width: 70%;
-}
+} */
 
 #icono{
   height: 50px;
   padding-left: 10px;
   z-index: 40;
   cursor: pointer;
+}
+
+.divNoticias{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
