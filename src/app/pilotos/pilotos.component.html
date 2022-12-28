@@ -1,6 +1,19 @@
 <div class="div1">
   <div class="div2">
     <app-menu></app-menu>
+    <div *ngIf="mostrar == true">
+      <app-noticias></app-noticias>
+      <div class="equis">
+        <button type="button" (click)="cerrar()">X</button>
+      </div>
+    </div>
+
+    <div class="noticia">
+      <div class="semicircle">
+        <img id="icono" (click)="mostrarNoticias()" src="../../assets/Exports/Iconos_Web_Carreras_Comentarios.png" alt="Icono de comentarios">
+      </div>
+    </div>
+
 
     <div class="div3">
       <h1 class="vista">PILOTOS</h1>
@@ -9,7 +22,7 @@
     <div class="main">
       <div class="navegadorPilotos">
         <button class="pilotoAnterior"><</button>
-        <button class="pilotoSiguiente">></button>
+        <button class="pilotoSiguiente" (click)="pilotoPrevio()">></button>
 
       </div>
       <div class="div4">
@@ -34,10 +47,7 @@
             </mat-option>
           </mat-autocomplete>
           </mat-placeholder>
-
-
         </form>
-
       </div>
 
       <div class="row">

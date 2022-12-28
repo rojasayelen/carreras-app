@@ -18,6 +18,8 @@ import { Observable } from 'rxjs';
 })
 export class PilotosComponent implements OnInit {
   Subject: any;
+  formatValue!: string;
+  mostrar = false;
 
   searchColumn(value: string): void {
     console.log('value', value);
@@ -29,6 +31,7 @@ export class PilotosComponent implements OnInit {
 
   // public page!: number;
 
+  tablaPiloto: Pilotos[] = [];
   piloto: Pilotos[] = [];
   pilu = {
     idPiloto:0,
@@ -52,7 +55,7 @@ export class PilotosComponent implements OnInit {
     private pilotoService:PilotosService) {}
 
   ngOnInit(): void {
-    this.punto.nombrePilotoPilCatPunt[0];
+
   //   this.Subject.pipe(debounceTime(500))
   //   .subscribe((search: any) => {
   //     this.searchColumn(search);
@@ -69,6 +72,7 @@ export class PilotosComponent implements OnInit {
       this.piloto = dato;
       let primerPiloto = this.piloto[0];
       this.traerPilCatPunt(primerPiloto.nombrePiloto);
+
     });
   }
 
@@ -81,9 +85,10 @@ export class PilotosComponent implements OnInit {
   }
 
   private _filter(value:string): Pilotos[]{
-    const formatValue = value.toLocaleLowerCase();
+    this.formatValue = value.toLocaleLowerCase();
+    console.log('el valor de value ',value);
     return this.piloto.filter(value =>
-      value.nombrePiloto.toLocaleLowerCase().includes(formatValue));
+      value.nombrePiloto.toLocaleLowerCase().includes(this.formatValue));
 
     // return this.piloto._filter(pilotoFiltrado =>
     //   pilotoFiltrado.nombrePiloto.toLocaleLowerCase()
@@ -213,16 +218,28 @@ export class PilotosComponent implements OnInit {
     }
 ]
 
-  public pilotoPrevios():void {
-    this.pilotoService.obtenerPilotos().subscribe(data => {
-      let datoPiloto = data.filter(item => item.nombrePiloto == this.pilu.nombrePiloto);
+  public pilotoPrevio():void {
+      let datoPiloto = this.piloto.filter(item => item.nombrePiloto == this.formatValue);
+
+
+      console.log('dato formatValue', this.formatValue);
       let getPiloto = datoPiloto.find(item => item.idPiloto == this.pilu.idPiloto);
-      let index = datoPiloto.findIndex(item => item == this.pilu);
-      let indexPrevio: number = index != 0 ? index -1: datoPiloto.length - 1;
+      //let index = datoPiloto.findIndex(item => item == getPiloto);
+      console.log('este es el dato')
+      // let indexPrevio: number = index != 0 ? index -1: datoPiloto.length - 1;
       // let idPrevio: number = datoPiloto[indexPrevio].idPiloto;
       // this.pilu.idPiloto = idPrevio;
-      console.log(`este es el index = ${index}`, index);
-      });
+      console.log(`este es el index = ${datoPiloto}`, datoPiloto);
+
+  }
+
+  mostrarNoticias(){
+    this.mostrar = true;
+    console.log('esto es mostrar', this.mostrar);
+  }
+  cerrar(){
+    this.mostrar=false;
+    console.log('esto es cerrar desde noticias', this.mostrar);
   }
 }
 

@@ -1,18 +1,32 @@
 <div class="div1">
   <div class="div2">
+
     <app-menu></app-menu>
+    <div *ngIf="mostrar == true">
+      <app-noticias></app-noticias>
+      <div class="equis">
+        <button type="button" (click)="cerrar()">X</button>
+      </div>
+    </div>
+
+    <div class="noticia">
+      <div class="semicircle">
+        <img id="icono" (click)="mostrarNoticias()" src="../../assets/Exports/Iconos_Web_Carreras_Comentarios.png" alt="Icono de comentarios">
+      </div>
+    </div>
 
     <div class="div3">
       <h1 class="vista">RANKING</h1>
     </div>
 
     <div class="navegador">
-      <a>
+      <a routerLink="/home" class="button">
         <img class="atras" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
       </a>
-      <a routerLink="/ranking-tabla" class="buttom">
+      <a routerLink="/pilotos" class="button">
         <img class="adelante" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
       </a>
     </div>
+
   </div>
 </div>

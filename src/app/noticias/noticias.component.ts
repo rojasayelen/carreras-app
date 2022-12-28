@@ -27,6 +27,7 @@ import { trigger, style, transition, animate, state } from '@angular/animations'
 })
 
 export class NoticiasComponent implements OnInit {
+   mostrar = true;
 
   constructor(
     private router: Router,
