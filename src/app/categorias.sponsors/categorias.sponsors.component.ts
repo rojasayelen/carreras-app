@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CategoriasSponsorsComponent implements OnInit {
-
+  mostrar = false;
 
   constructor() {}
 
@@ -16,5 +16,13 @@ export class CategoriasSponsorsComponent implements OnInit {
 
   }
 
+  mostrarNoticias(){
+    this.mostrar = true;
+    console.log('esto es mostrar', this.mostrar);
+  }
+  cerrar(){
+    this.mostrar=false;
+    console.log('esto es cerrar desde noticias', this.mostrar);
+  }
 
 }

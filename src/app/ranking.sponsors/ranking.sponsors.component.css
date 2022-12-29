@@ -1,3 +1,4 @@
+
 .div1{
   border: 2px solid #e87867;
   border-radius: 10px;overflow: hidden;
@@ -93,7 +94,6 @@
 
 button {
   background-color: transparent;
-  color: #ffffff;
   font-size: 53px;
   font-weight: 200;
   margin-left: 91vw;
@@ -101,5 +101,17 @@ button {
   position: fixed;
   z-index: 75;
   cursor:pointer;
+  width: 20px;
 }
 
+.aRanking {
+  height: 30px;
+  margin-top: 80vh;
+  margin-left: 40vw;
+  color: #e87867;
+}
+
+a:-webkit-any-link {
+  color: #e87867;
+
+}

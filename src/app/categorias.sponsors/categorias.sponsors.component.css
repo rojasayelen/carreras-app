@@ -34,23 +34,21 @@
 }
 
 .navegador img {
-  width: 4%;
-}
-
-.navegador {
   position: fixed;
-  margin-top: 160px;
-  margin-left: 250px;
+  margin-top: 80px;
   z-index: 10;
+  height: 60px;
+  width: 60px;
+  border: 3px
 }
 
 .atras {
   transform: rotate(180deg);
-  margin-left: 650px;
+  margin-left: 1050px;
 }
 
 .adelante {
-  margin-left: 20px;
+  margin-left: 1150px;
 }
 
 .texto {
@@ -60,4 +58,72 @@
   z-index: 10;
   color: white;
 
+}
+
+/* css de noticias */
+.semicircle {
+  width: 50px;
+  height: 100px;
+  border: 3px solid #ffffff;
+  -moz-border-radius: 100px 0 0 100px ;
+  -webkit-border-radius: 100px 0 0 100px;
+  border-radius: 100px 0 0 100px;
+  border-right: none;
+  position: absolute;
+  top: 40vh;
+  right: 15px;
+  background: transparent;
+  z-index: 30;
+}
+
+#icono{
+  height: 50px;
+  padding-left: 10px;
+  z-index: 40;
+  cursor: pointer;
+}
+
+.semicircle img {
+  height: 28px;
+  position: relative;
+  top: 25px;
+  color: white;
+  right: 5px;
+  background-color: transparent;
+}
+
+.noti {
+  background-color: black;
+  opacity: 0.93;
+  width: 40%;
+  height: 88vh;
+  display: inline-block;
+  position: absolute;
+  right: -4px;
+  z-index: 60;
+  border-top: 1px solid black;
+  /* border: 3px solid rgb(197, 187, 51); */
+  padding-left: 4em;
+}
+
+.equis {
+  z-index: 60;
+  height: 50px;
+  padding-left: 20px;
+  z-index: 40;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 200;
+  margin-left: 88vw;
+  margin-top: 40vh;
+  position: fixed;
+  z-index: 75;
+  cursor:pointer;
+  height: 1em;
+  width: 1em;
 }

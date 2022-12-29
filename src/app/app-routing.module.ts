@@ -8,7 +8,7 @@ import { RankingSponsorsComponent } from './ranking.sponsors/ranking.sponsors.co
 import { RankingTablaComponent } from './ranking.tabla/ranking.tabla.component';
 import { CategoriasSponsorsComponent } from './categorias.sponsors/categorias.sponsors.component';
 import { CategoriasTablasComponent } from './categorias-tablas/categorias-tablas.component';
-import { PilCatPuntComponent } from './pilotos/pilCatPunt/pilCatPunt.component';
+
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -19,7 +19,6 @@ const routes: Routes = [
   {path:'categorias', component:CategoriasSponsorsComponent},
   {path:'categorias-tabla', component:CategoriasTablasComponent},
   {path:'noticias', component:NoticiasComponent},
-  {path: 'pilcatpunt', component:PilCatPuntComponent},
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'#1', redirectTo:'pilotos', component:PilotosComponent},
 

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Pilotos } from './pilotos';
 import { PilotosService } from './pilotos.service';
 import { PilCatPunt } from './pilCatPunt/pilCatPunt';
-import { debounceTime, map, startWith } from 'rxjs/operators';
+import { debounceTime, findIndex, map, startWith } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 
@@ -97,8 +97,9 @@ export class PilotosComponent implements OnInit {
       value.nombrePiloto.toLocaleLowerCase().includes(this.formatValue));
   }
 
-  public pilotoPrevio(value: string):void {
-    let namePiloto = this.piloto.findIndex(item => item.nombrePiloto);
+  public pilotoPrevio():void {
+    //let namePiloto = this.piloto.findIndex(item => item.nombrePiloto);
+
 
   }
 

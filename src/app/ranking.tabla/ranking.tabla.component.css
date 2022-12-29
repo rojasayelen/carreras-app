@@ -1,4 +1,4 @@
-/* * {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,15 +6,11 @@
 }
 
 .principal-container {
-  width: 90%;
+  width: 95%;
   height: 540px;
-  border: 2px solid red;
-  border-radius: 7px;
   position: relative;
-  margin: 50px auto;
-  opacity: .9;
+  margin: 10px auto;
   overflow: hidden;
-  padding: 10px 10px;
 }
 
 .principal-container h4 {
@@ -51,7 +47,7 @@
 .filters {
   position: absolute;
   color: white;
-  top: 150px;
+  top: 100px;
   left: 180px;
   text-align: center;
 }
@@ -66,7 +62,7 @@
 #list li {
   display: inline;
   padding: 3px 30px;
-  border: 1px solid red;
+  border: 1px solid #e87867;
   border-radius: 15px;
   margin: 0px 8px;
 }
@@ -78,7 +74,7 @@
 .table {
   position: absolute;
   color: white;
-  top: 180px;
+  top: 140px;
   left: 80px;
 }
 
@@ -136,4 +132,4 @@ footer {
 
 .arrow {
   font-size: 20px;
-} */
+}

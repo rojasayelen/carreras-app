@@ -23,13 +23,18 @@
   z-index: 0;
 }
 
-.div3 h1{
+.div3 {
   margin-left: 600px;
-  margin-top: 35px;
+  margin-top: 30px;
+  height: 35px;
+  position: flex;
+  border: solid 2px greenyellow;
+}
+
+.vista{
+  margin-top: 3px;
   font-size: 20px;
   font-weight: 400;
-  text-align: center;
-  position: absolute;
 }
 
 .div4{
@@ -40,9 +45,9 @@
   font-size: 18px;
   text-transform: uppercase;
   margin-top:120px;
-  margin-left: 55%;
+  margin-left:10px;
   z-index: 1;
-  /* border:rgb(50, 161, 205) 5px solid; */
+  border:rgb(50, 161, 205) 5px solid;
 }
 
 .search{
@@ -53,7 +58,9 @@
   height: 10px;
   padding: 10px;
   margin-top: 5px;
+  margin-left: 10px;
   width: 72%;
+
 }
 
 .search:focus{
@@ -71,7 +78,7 @@
 }
 
 .navegadorPilotos {
-  position: absolute;
+  position: relative;
   margin-top: 8%;
   margin-left: 45%;
 }
@@ -113,7 +120,7 @@
 }
 
 .puntos_seccion{
-  /* border: solid 3px goldenrod; */
+  border: solid 3px goldenrod;
   /* float: left; */
   position: absolute;
   height: fit-content;
@@ -123,7 +130,7 @@
 }
 
 .contenedor_info_posicion{
-  /* border: 4px cyan solid; */
+  border: 4px cyan solid;
   display: flex;
   height: 3em;
 }
@@ -208,8 +215,7 @@
 .div5{
   margin-top: 17%;
   width: 40%;
-  flex: 40%;
-  /* border: solid 3px yellow; */
+  border: solid 3px yellow;
 }
 
 .puntosPiloto{
@@ -225,10 +231,12 @@
 /* CSS de la tabla de puntos y categorias */
 
 .row{
-  flex: 100%;
-  /* border: solid 2px rgb(205, 50, 179); */
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  margin-left: -500px;
+  border: solid 2px rgb(205, 50, 179);
 }
-
 
 .nombre {
   font-size: 60px;
@@ -265,7 +273,7 @@
   text-align: center;
   font-size: 18px;
   font-weight: 200;
-
+  border: 3px solid turquoise;
 }
 
 .categ{
@@ -278,7 +286,7 @@
 }
 
 .mostrarPiloto{
-  /* border: blue solid 3px; */
+  border: blue solid 3px;
   /* width: 600px; */
   margin-top: 5em;
   margin-left: 80px;
@@ -286,8 +294,8 @@
 
 .mostrarDatos{
   padding-bottom: 5%;
+  border: 3px solid white;
 }
-
 
 .semicircle {
   width: 50px;

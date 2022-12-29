@@ -1,30 +1,31 @@
 <div class="div1">
   <div class="div2">
     <app-menu></app-menu>
+    <div *ngIf="mostrar == true">
+      <app-noticias></app-noticias>
+      <div class="equis">
+        <button type="button" (click)="cerrar()">X</button>
+      </div>
+    </div>
+
+    <div class="noticia">
+      <div class="semicircle">
+        <img id="icono" (click)="mostrarNoticias()" src="../../assets/Exports/Iconos_Web_Carreras_Comentarios.png" alt="Icono de comentarios">
+      </div>
+    </div>
+
     <div class="div3">
       <h1 class="vista">CATEGORIAS</h1>
     </div>
 
     <div class="navegador">
-      <a>
+      <a routerLink="/pilotos">
         <img class="atras" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
       </a>
       <a routerLink="/categorias-tabla" class="buttom">
         <img class="adelante" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_1.png">
       </a>
     </div>
-    <!-- <div class="texto">
-      <div>
-        <p class="linea1">
-          Lorem ipsum
-        </p>
-      </div>
-      <div>
-        <p class="linea2">
-          Lorem ipsum
-        </p>
-      </div>
-    </div>-->
   </div>
 </div>
 
