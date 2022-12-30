@@ -4,17 +4,19 @@ div p{
 }
 
 /* Bloque de noticias*/
+.divNoti{
+  margin-top: 2vh;
+}
 .noti {
+
   background-color: black;
   opacity: 0.93;
-  width: 47%;
+  width: 36%;
   height: 88vh;
-  /* display: inline-block; */
   position: absolute;
   right: 0;
   z-index: 60;
   border-top: 1px solid black;
-  /* border: 3px solid rgb(197, 187, 51); */
   padding-left: 4em;
 }
 
@@ -32,7 +34,6 @@ div p{
 
 .sem1 {
   float: left;
-  /* width: 35%; */
   position: relative;
   font-size: 1em;
   text-align: left;
@@ -49,11 +50,15 @@ div p{
   color:darkgrey;
 }
 
+.titulo1{
+  font-size: 1.7em;
+}
+
 tbody {
   display: table-row-group;
 }
 
-.titulo{
+.titulo2{
   margin-bottom: 15px;
   margin-top: 18px;
   font-size: 24px;

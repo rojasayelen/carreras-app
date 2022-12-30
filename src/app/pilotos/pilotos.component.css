@@ -13,48 +13,36 @@
 .div2{
   height: 94vh;
   width: 96vw;
-  /* display: flex;
-  vertical-align: middle; */
+  display: flex;
+  vertical-align: middle;
   border-radius: 10px;
   position: relative;
-  /* background-image: url(../../assets/Pilotos_Carreras.jpg);
+  background-image: url(../../assets/Pilotos_Carreras.jpg);
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
   z-index: 0;
 }
 
-.div3 {
-  margin-top: 30px;
-  width: fit-content;
-  height: 35px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  border: solid 2px greenyellow;
-}
-
-.vista{
-  margin-top: 3px;
+.div3 h1{
+  margin-left: 600px;
+  margin-top: 35px;
   font-size: 20px;
   font-weight: 400;
+  text-align: center;
+  position: absolute;
 }
 
-/* .div4{
-  width: 300px;
-  height: 500px ;
+.div4{
+  position: absolute;
+  height: fit-content;
   color: #e87867;
   font-weight: bold;
   font-size: 18px;
   text-transform: uppercase;
-  margin-top:10px;
+  margin-top:120px;
+  margin-left: 55%;
   z-index: 1;
-  border:rgb(50, 161, 205) 5px solid;
-} */
-
-.div5{
-  margin-top: 30vh;
-  height: 100px;
-  border: 3px solid rgb(255, 0, 0);
+  /* border:rgb(50, 161, 205) 5px solid; */
 }
 
 .search{
@@ -65,7 +53,6 @@
   height: 10px;
   padding: 10px;
   margin-top: 5px;
-  margin-left: 10px;
   width: 72%;
 }
 
@@ -79,44 +66,35 @@
   align-items: flex-start;
 }
 
-/* .navegadorPilotos img {
+.navegadorPilotos img {
   width: 4%;
-} */
-
-.titulo2{
-  margin-top: 1vh;
 }
 
 .navegadorPilotos {
-  width: 20vh;
-  align-items: center;
-  height: 2vw;
-  margin-top: 10vh;
-  border: 3px solid darkorange;
+  position: absolute;
+  margin-top: 8%;
+  margin-left: 45%;
 }
 
-img{
-  width: 50px;
-  height: 50px;
-}
-
-.pilotoAnterior{
+.pilotoAnterior {
   margin-top: 1vh;
   margin-left: 1vw;
-  font-size: 3em;
-  color: #e87867;
-  background-color: transparent;
-  cursor: pointer;
-  transform: rotate(180deg);
-}
-
-.pilotoSiguiente {
-  margin-top: 1vh;
-  margin-left: 0.5vw;
   font-size: 3em;
   font-weight: bold;
   color: #e87867;
   background-color: transparent;
+  border: solid 2x red;
+  cursor: pointer;
+}
+
+.pilotoSiguiente {
+  margin-top: 1vh;
+  margin-left: 4vw;
+  font-size: 3em;
+  font-weight: bold;
+  color: #e87867;
+  background-color: transparent;
+  border: solid 2px blue;
   cursor:pointer;
 }
 
@@ -135,14 +113,17 @@ img{
 }
 
 .puntos_seccion{
+  /* border: solid 3px goldenrod; */
   /* float: left; */
-  height: 45vh;
-  margin-top: 10vh;
+  position: absolute;
+  height: fit-content;
+  margin-top: 3em;
+  margin-left: -14%;
   z-index: 2;
-  border: 3px solid greenyellow;
 }
 
 .contenedor_info_posicion{
+  /* border: 4px cyan solid; */
   display: flex;
   height: 3em;
 }
@@ -219,10 +200,22 @@ img{
   margin-left: 1em;
 }
 
+.main{
+  width: 96vw;
+  display: flex;
+}
+
+.div5{
+  margin-top: 17%;
+  width: 40%;
+  flex: 40%;
+  /* border: solid 3px yellow; */
+}
+
 .puntosPiloto{
   margin-top: 10%;
-  /* margin-left: 13%; */
-  border: solid 2px blueviolet;
+  margin-left: 13%;
+  /* border: solid 2px blueviolet; */
 }
 
 .select{
@@ -230,12 +223,10 @@ img{
 }
 
 /* CSS de la tabla de puntos y categorias */
+
 .row{
-
-  height: 50vh;
-
-  z-index: 1;
-  border: solid 2px rgb(205, 50, 179);
+  flex: 100%;
+  /* border: solid 2px rgb(205, 50, 179); */
 }
 
 .nombre {
@@ -273,7 +264,7 @@ img{
   text-align: center;
   font-size: 18px;
   font-weight: 200;
-  border: 3px solid turquoise;
+
 }
 
 .categ{
@@ -286,19 +277,16 @@ img{
 }
 
 .mostrarPiloto{
-  border: blue solid 3px;
+  /* border: blue solid 3px; */
+  /* width: 600px; */
   margin-top: 5em;
   margin-left: 80px;
 }
 
 .mostrarDatos{
   padding-bottom: 5%;
-  margin-top: 10vh;
-  margin-left: 10vw;
-  border: 3px solid white;
 }
 
-/* Css de Noticias */
 .semicircle {
   width: 50px;
   height: 100px;

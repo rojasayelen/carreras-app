@@ -3,18 +3,16 @@
       <div class="noti">
         <div class="row">
           <div class="semana">
-            <div class="sem1"><h3>ÚLTIMA SEMANA</h3></div>
-            <div class="sem2"><h3>PRÓXIMA SEMANA</h3></div>
+            <div class="sem1"><h3 class="titulo1">NOTICIAS</h3></div>
           </div>
 
-          <div class="divNoticias">
-            <div class="bloqueNoticias" *ngFor="let noti of noticia | paginate: { itemsPerPage: 3, currentPage: pages}; index as i">
+          <div class="divNoti">
+            <div class="bloqueNoticias" *ngFor="let noti of noticia | paginate: { itemsPerPage: 3, currentPage: pages}">
               <tbody>
-                <div class="titulo"><th>COMENTARIO #{{i+1}}</th><br></div>
+                <div class="titulo2"><th>{{noti.fechaNoticia}}</th><br></div>
                 <div>
                   <tr>
                     <td class="cuerpoNoticia">{{noti.cuerpoNoticia}}</td>
-                    <td class="fechaNoticia">{{noti.fechaNoticia}}</td>
                   </tr>
                 </div>
               </tbody>

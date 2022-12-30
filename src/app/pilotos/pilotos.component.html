@@ -18,29 +18,15 @@
       <h1 class="vista">PILOTOS</h1>
     </div>
 
-    <div class="row">
-      <div class="puntosPiloto">
-        <div class="mostrarDatos">
-          <div class="nombre">{{ punto.nombrePilotoPilCatPunt }}</div>
-          <div class="apellido">{{ punto.nombrePilotoPilCatPunt }}</div>
-        </div>
-        <div class="cardsGrid">
-          <div class="card" *ngFor="let dat of puntos">
-             <li class="contentCard">
-              <div class="categ">{{ dat.idCategoriaPilCatPunt }}</div>
-              <div class="puntos">{{ dat.puntosActPilCantPunt }}</div>
-            </li>
-          </div>
-        </div>
+    <div class="main">
+      <div class="navegadorPilotos">
+        <button class="pilotoAnterior"><</button>
+        <button class="pilotoSiguiente" >></button>
+
       </div>
+      <div class="div4">
+        <label>Siguiente Piloto</label>
 
-
-        <div class="navegadorPilotos">
-          <img class="pilotoAnterior" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png"/>
-          <img class="pilotoSiguiente" src="../../assets/Exports/Iconos_Web_Carreras_Flecha_2.png" />
-        </div>
-        <div class="div5">
-        <label class="titulo2">Siguiente Piloto</label>
         <form>
           <mat-placeholder>
           <input class="search"
@@ -51,7 +37,8 @@
             name="nombre"
             (ngModel)="punto"
             placeholder="Buscar Piloto"
-            #search (keyup)="searchColumn(search.value)"/>
+            #search (keyup)="searchColumn(search.value)"
+          />
 
           <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
             <mat-option *ngFor="let piloto of filPilotos | async" [value]="piloto">
@@ -60,7 +47,28 @@
           </mat-autocomplete>
           </mat-placeholder>
         </form>
+      </div>
 
+      <div class="row">
+        <div class="puntosPiloto">
+
+          <div class="mostrarDatos">
+            <div class="nombre">{{ punto.nombrePilotoPilCatPunt }}</div>
+            <div class="apellido">{{ punto.nombrePilotoPilCatPunt }}</div>
+          </div>
+
+          <div class="cardsGrid">
+            <div class="card" *ngFor="let dat of puntos">
+               <li class="contentCard">
+                <div class="categ">{{ dat.idCategoriaPilCatPunt }}</div>
+                <div class="puntos">{{ dat.puntosActPilCantPunt }}</div>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="div5">
         <div class="puntos_seccion">
           <div class="contenedor_info_posicion">
             <div class="div_posicion">
@@ -85,13 +93,9 @@
             <p class="puntos_ant">{{ pilu.puntajeAntPiloto }}</p>
           </div>
         </div>
-
       </div>
-
-
-
-
     </div>
     <!--<pagination-controls (pageChange)="page = $event"  previousLabel="<" nextLabel=">"></pagination-controls> -->
   </div>
 </div>
+

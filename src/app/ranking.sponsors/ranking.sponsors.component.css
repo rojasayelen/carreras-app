@@ -44,11 +44,16 @@
   z-index: 10;
 }
 
-.adelante {
+.atras {
+  transform: rotate(180deg);
   margin-left: 65vw;
 }
 
-/*CSS Noticias*/
+.adelante {
+  margin-left: 20px;
+}
+
+/*CSS*/
 .semicircle {
   width: 50px;
   height: 100px;
