@@ -44,15 +44,11 @@
   z-index: 10;
 }
 
-.atras {
-  transform: rotate(180deg);
+.adelante {
   margin-left: 65vw;
 }
 
-.adelante {
-  margin-left: 20px;
-}
-
+/*CSS Noticias*/
 .semicircle {
   width: 50px;
   height: 100px;
@@ -104,14 +100,3 @@ button {
   width: 20px;
 }
 
-.aRanking {
-  height: 30px;
-  margin-top: 80vh;
-  margin-left: 40vw;
-  color: #e87867;
-}
-
-a:-webkit-any-link {
-  color: #e87867;
-
-}

@@ -7,7 +7,7 @@ import { Noticias } from './noticias';
   providedIn: 'root'
 })
 export class NoticiasService {
-  private baseURL="https://complete-audry-privas06.koyeb.app/ver/noticiasOrdenadas";
+  private baseURL="https://complete-audry-privas06.koyeb.app/ver/noticias";
 
   private noticias: Noticias[] = [];
 

@@ -13,6 +13,24 @@
   overflow: hidden;
 }
 
+.navegador img {
+  width: 50%;
+}
+
+.navegador {
+  position: fixed;
+  width:100px;
+  height: 80px;
+  margin-top: 60px;
+  margin-left: 0px;
+  z-index: 10;
+}
+
+.atras {
+  transform: rotate(180deg);
+  /* margin-left: 65vw; */
+}
+
 .principal-container h4 {
   position: absolute;
   color: white;
