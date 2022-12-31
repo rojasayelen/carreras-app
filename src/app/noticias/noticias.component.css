@@ -6,16 +6,16 @@ div p{
 /* Bloque de noticias*/
 .divNoti{
   margin-top: 2vh;
+  height: 100%;
 }
 .noti {
-
   background-color: black;
   opacity: 0.93;
   width: 36%;
-  height: 88vh;
+  height: 96vh;
   position: absolute;
   right: 0;
-  z-index: 60;
+  z-index: 70;
   border-top: 1px solid black;
   padding-left: 4em;
 }
